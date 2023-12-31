@@ -1,0 +1,43 @@
+#!/usr/bin/env sh
+
+GH_TOKEN="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"
+
+set -e
+
+# Função para irmos informando o usuário via terminal (CLI) aquilo que estamos a fazer
+function info() {
+	if [[ -t 1 ]]; then
+		printf "%b==>%b %b%s%b\n" "\x1b[1m\x1b[32m" "\x1b[0m" \
+		                          "\x1b[1m\x1b[37m" "$1" "\x1b[0m"
+	else
+		printf "*** %s\n" "$1"
+	fi
+}
+# Função para irmos avisando o usuário via terminal (CLI) aquilo que estamos a fazer
+function avisar() {
+	if [[ -t 1 ]]; then
+		printf "%b==>%b %b%s%b\n" "\x1b[1m\x1b[33m" "\x1b[0m" \
+			                  "\x1b[1m\x1b[37m" "$1" "\x1b[0m" >&2
+	else
+		printf "*** %s\n" "$1" >&2
+	fi
+}
+
+info "Iniciando o git..."
+if [ ! -d ".git" ]; then
+	git init
+	git add .
+	git commit -m "Primeiro Commit"
+	git branch -M main
+	git remote add origin https://$GH_TOKEN@github.com/neoricalex/dev.git
+	git push -u origin main
+fi
+#rm -rf .git
+#info "Bem-vindo(a) ao NEORICALEX!"
+#avisar "Compilando o neoricalex..."
+#autoreconf --install
+#./configure
+#make
+
+#avisar "Executando o src/neoricalex..."
+#src/neoricalex

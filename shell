@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-GH_TOKEN="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"
+GH_TOKEN="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"
 
 set -e
 
@@ -32,7 +32,10 @@ if [ ! -d ".git" ]; then
 	git remote add origin https://$GH_TOKEN@github.com/neoricalex/dev.git
 	git push -u origin main
 fi
+
 #rm -rf .git
+#git remote set-url origin https://$GH_TOKEN@github.com/neoricalex/dev.git
+
 info "Bem-vindo(a) ao NEORICALEX!"
 avisar "Compilando o neoricalex..."
 autoreconf --install

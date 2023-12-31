@@ -176,5 +176,5 @@ checkar terraform
 cd localhost
 iniciar terraform
 iniciar vps
-terraform destroy -auto-approve && rm ~/.ssh/known_hosts
+#terraform destroy -auto-approve && rm ~/.ssh/known_hosts
 cd ..

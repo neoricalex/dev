@@ -33,11 +33,11 @@ if [ ! -d ".git" ]; then
 	git push -u origin main
 fi
 #rm -rf .git
-#info "Bem-vindo(a) ao NEORICALEX!"
-#avisar "Compilando o neoricalex..."
-#autoreconf --install
-#./configure
-#make
+info "Bem-vindo(a) ao NEORICALEX!"
+avisar "Compilando o neoricalex..."
+autoreconf --install
+./configure
+make
 
-#avisar "Executando o src/neoricalex..."
-#src/neoricalex
+avisar "Executando o src/neoricalex..."
+src/neoricalex

@@ -31,6 +31,13 @@ resource "libvirt_volume" "os_image" {
   format = "qcow2"
 }
 
+resource "libvirt_volume" "os_image_resized" {
+  name = "${var.hostname}-vm_disk"
+  pool = "default"
+  size   = 1e+10 # 10 GB in bytes
+  base_volume_id = libvirt_volume.os_image.id
+}
+
 // Use CloudInit ISO to add ssh-key to the instance
 resource "libvirt_cloudinit_disk" "commoninit" {
   name = "${var.hostname}-commoninit.iso"
@@ -64,14 +71,14 @@ data "template_file" "network_config" {
 
 
 // Create the machine
-resource "libvirt_domain" "domain-ubuntu" {
+resource "libvirt_domain" "domain-vps" {
   # domain name in libvirt, not hostname
   name = "${var.hostname}"
   memory = var.memoryMB
   vcpu = var.cpu
 
   disk {
-    volume_id = libvirt_volume.os_image.id
+    volume_id = libvirt_volume.os_image_resized.id
   }
   network_interface {
     network_name = "default"
@@ -96,5 +103,5 @@ resource "libvirt_domain" "domain-ubuntu" {
 }
 
 output "ips" {
-  value = libvirt_domain.domain-ubuntu.*.network_interface.0.addresses
+  value = libvirt_domain.domain-vps.*.network_interface.0.addresses
 }

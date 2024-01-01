@@ -51,4 +51,13 @@ m4/lt~obsolete.m4
 # (which is called by configure script))
 Makefile
 
+*.o
+*.h
+src/neoricalex
+src/virtualhost/localhost/.terraform/
 src/virtualhost/localhost/iso/jammy-server-cloudimg-amd64.img
+src/virtualhost/localhost/.terraform.lock.hcl
+src/virtualhost/localhost/terraform.tfstate
+src/virtualhost/localhost/terraform.tfstate.backup
+src/virtualhost/localhost/vps
+

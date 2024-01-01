@@ -147,7 +147,7 @@ iniciar(){
         if [ ! -f "vps" ]; then 
             terraform plan -out=vps
             terraform apply "vps"
-            aviso "==> Aguardando 15 segundos para que o $1 plan "vps" seja completamente iniciado..."
+            aviso "==> Aguardando 15 segundos para que o $1 plan "vps" seja completamente aplicado e tenhamos um IP disponivel..."
             sleep 15
             terraform plan -out=vps
             terraform apply "vps"
@@ -175,7 +175,7 @@ checkar kvm
 checkar terraform
 cd localhost
 iniciar terraform
-#terraform destroy -auto-approve
+terraform destroy -auto-approve
 #iniciar vps
 #terraform destroy -auto-approve
 cd ..

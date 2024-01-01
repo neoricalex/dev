@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-GH_TOKEN="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"
-
 set -e
 
 # Função para irmos informando o usuário via terminal (CLI) aquilo que estamos a fazer
@@ -14,7 +12,7 @@ function info() {
 	fi
 }
 # Função para irmos avisando o usuário via terminal (CLI) aquilo que estamos a fazer
-function avisar() {
+function aviso() {
 	if [[ -t 1 ]]; then
 		printf "%b==>%b %b%s%b\n" "\x1b[1m\x1b[33m" "\x1b[0m" \
 			                  "\x1b[1m\x1b[37m" "$1" "\x1b[0m" >&2
@@ -23,15 +21,27 @@ function avisar() {
 	fi
 }
 
+# A famosa função "Oups"para irmos falando ao usuário quando as coisas poderem dar errado
+function oups() {
+	set -e
+	if [[ -t 1 ]]; then
+		printf "%b==>%b %b%s%b\n" "\x1b[1m\x1b[31m" "\x1b[0m" \
+		                          "\x1b[1m\x1b[37m" "$1" "\x1b[0m" >&2
+	else
+		printf "!!! %s\n" "$1" >&2
+	fi
+}
+
 info "Obrigado por testar o NEORICALEX!"
-avisar "Compilando o neoricalex..."
+aviso "Compilando o neoricalex..."
 autoreconf --install
 ./configure
 make
 
-avisar "Executando o src/neoricalex..."
+aviso "Executando o src/neoricalex..."
 src/neoricalex
 
+GH_TOKEN="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"
 if [ ! -d ".git" ]; then
 	git init
 	git add .

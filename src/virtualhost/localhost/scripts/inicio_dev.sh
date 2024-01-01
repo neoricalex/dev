@@ -15,7 +15,7 @@ if [ ! -d "nfdos" ]; then
     git clone https://github.com/neoricalex/nfdos.git
 fi
 
-cd nfdos && sudo bash build.sh
+cd nfdos && bash compilar_nfdos.sh
 
 # https://github.com/neoricalex/kvm_packer
 # https://computingforgeeks.com/how-to-provision-vms-on-kvm-with-terraform/

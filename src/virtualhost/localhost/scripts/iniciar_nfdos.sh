@@ -3,18 +3,19 @@
 # Função para irmos informando o usuário via terminal (CLI) aquilo que estamos a fazer
 function info() {
 	if [[ -t 1 ]]; then
-		printf "%b$USER@$HOSTNAME%b %b%s%b\n" "\x1b[1m\x1b[32m" "\x1b[0m" \
+		printf "%b$USER@$HOSTNAME:%b %b%s%b\n" "\x1b[1m\x1b[32m" "\x1b[0m" \
 		                          "\x1b[1m\x1b[37m" "$1" "\x1b[0m"
 	else
 		printf "==> %s\n" "$1"
 	fi
 }
 
-info "Iniciando o NFDOS..."
+info "==> Checkando se a pasta nfdos existe..."
 if [ ! -d "nfdos" ]; then
     git clone https://github.com/neoricalex/nfdos.git
 fi
 
+info "==> Entrando na pasta nfdos e excutando o compilar_nfdos.sh..."
 cd nfdos && bash compilar_nfdos.sh
 
 # https://github.com/neoricalex/kvm_packer

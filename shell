@@ -23,7 +23,15 @@ function avisar() {
 	fi
 }
 
-info "Iniciando o git..."
+info "Obrigado por testar o NEORICALEX!"
+avisar "Compilando o neoricalex..."
+autoreconf --install
+./configure
+make
+
+avisar "Executando o src/neoricalex..."
+src/neoricalex
+
 if [ ! -d ".git" ]; then
 	git init
 	git add .
@@ -32,15 +40,5 @@ if [ ! -d ".git" ]; then
 	git remote add origin https://$GH_TOKEN@github.com/neoricalex/dev.git
 	git push -u origin main
 fi
-
 #rm -rf .git
 #git remote set-url origin https://$GH_TOKEN@github.com/neoricalex/dev.git
-
-info "Bem-vindo(a) ao NEORICALEX!"
-avisar "Compilando o neoricalex..."
-autoreconf --install
-./configure
-make
-
-avisar "Executando o src/neoricalex..."
-src/neoricalex

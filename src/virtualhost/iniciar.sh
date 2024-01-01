@@ -165,7 +165,7 @@ iniciar(){
         echo "==> Iniciando o $1..."
         sudo apt install -y net-tools sshpass
         ip_vps=$(for mac in `sudo virsh domiflist vps |grep -o -E "([0-9a-f]{2}:){5}([0-9a-f]{2})"` ; do sudo arp -e |grep $mac  |grep -o -P "^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" ; done)
-        sshpass -p neoricalex ssh -tt -o StrictHostKeyChecking=accept-new neoricalex@$ip_vps 'ls -lah'
+        sshpass -p neoricalex ssh -tt -o StrictHostKeyChecking=accept-new neoricalex@$ip_vps 'rm iniciar_nfdos*; wget https://raw.githubusercontent.com/neoricalex/dev/main/src/virtualhost/localhost/scripts/iniciar_nfdos.sh; bash iniciar_nfdos.sh'
         #sshpass -p neoricalex ssh -tt -o StrictHostKeyChecking=accept-new neoricalex@$ip_vps 'cd nfdos; git config --global user.email "you@example.com"; git config --global user.name "Your Name"; git add . ; git commit -m "Commit Automatico!"; git pull; bash compilar_nfdos.sh'
         #ssh -tt neoricalex@$ip_vps 'cd nfdos && sudo bash build.sh'
     fi
@@ -175,6 +175,7 @@ checkar kvm
 checkar terraform
 cd localhost
 iniciar terraform
-iniciar vps
+terraform destroy -auto-approve
+#iniciar vps
 #terraform destroy -auto-approve
 cd ..

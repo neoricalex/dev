@@ -33,6 +33,12 @@ function oups() {
 }
 
 info "Obrigado por testar o NEORICALEX!"
+
+aviso "Primeiro vamos actualizar os repositorios e pacotes do $HOSTNAME..."
+sudo apt update && sudo apt upgrade -y
+
+aviso "Agora instalar alguns pacotes fundamentais..."
+
 aviso "Compilando o neoricalex..."
 autoreconf --install
 ./configure

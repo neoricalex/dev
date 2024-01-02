@@ -46,12 +46,12 @@ if [ ! -d "$NFDOS" ]; then
     git clone https://github.com/neoricalex/nfdos.git
 fi
 
-info "Checkando se a $NFDOS_ROOT/nfdos.iso existe"
+info "==> Checkando se a $NFDOS_ROOT/nfdos.iso existe"
 if [ ! -f "$NFDOS_ROOT/nfdos.iso" ]; then
 	aviso "==> Entrando na pasta nfdos e excutando o compilar_nfdos.sh..."
 	cd nfdos && bash compilar_nfdos.sh
 else
-	aviso "A $NFDOS_ROOT/nfdos.iso existe"
+	aviso "==> A $NFDOS_ROOT/nfdos.iso existe"
 fi
 
 

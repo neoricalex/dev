@@ -176,10 +176,12 @@ checkar terraform
 cd localhost
 iniciar terraform
 #terraform destroy -auto-approve
+info "==> Aguardar 15 segundos para dar tempo ao VPS de iniciar completamente..."
+sleep 15
 iniciar vps
-#terraform destroy -auto-approve
 cd ..
 #ssh-keygen -f "/home/neo/.ssh/known_hosts" -R "192.168.122.123"
-#sudo modprobe nbd max_part=8
+#sudo modprobe nbd max_part=1
+#sudo rmmod nbd
 #sudo qemu-nbd --connect=/dev/nbd0 /var/lib/libvirt/images/vps-vm-disk
 #sudo qemu-nbd --disconnect /dev/nbd0

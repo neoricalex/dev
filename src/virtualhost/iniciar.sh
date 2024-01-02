@@ -179,7 +179,7 @@ iniciar terraform
 iniciar vps
 #terraform destroy -auto-approve
 cd ..
-
+#ssh-keygen -f "/home/neo/.ssh/known_hosts" -R "192.168.122.123"
 #sudo modprobe nbd max_part=8
 #sudo qemu-nbd --connect=/dev/nbd0 /var/lib/libvirt/images/vps-vm-disk
 #sudo qemu-nbd --disconnect /dev/nbd0

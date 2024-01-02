@@ -1,0 +1,70 @@
+#!/bin/bash
+
+cd /var/lib/neoricalex
+sudo chown -R neo:neo /var/lib/neoricalex
+
+echo "==> Iniciar o Auto-Start na versão GUI"
+# TODO: REF: https://unix.stackexchange.com/questions/172179/gnome-shell-running-shell-script-after-session-starts
+if [ ! -d "/home/neo/.config/autostart" ]; then
+	mkdir -p /home/neo/.config/autostart && cp /var/lib/neoricalex/src/vps/box/nfdos/desktop/inicio.desktop $_
+	chmod +x /home/neo/.config/autostart/inicio.desktop /var/lib/neoricalex/src/vps/box/nfdos/desktop/app/iniciar.sh
+	chown -R neo:neo /home/neo
+else
+	cp /var/lib/neoricalex/src/vps/box/nfdos/desktop/inicio.desktop /home/neo/.config/autostart/inicio.desktop
+	chmod +x /home/neo/.config/autostart/inicio.desktop /var/lib/neoricalex/src/vps/box/nfdos/desktop/app/iniciar.sh
+fi
+
+echo "==> Instalar o KVM"
+sudo apt install -y qemu qemu-kvm qemu-efi qemu-system qemu-utils qemu-block-extra \
+				libvirt-daemon libvirt-clients bridge-utils virt-manager qemu-system \
+				qemu-utils qemu-block-extra libvirt-daemon-system cpu-checker \
+				libguestfs-tools libosinfo-bin dnsmasq-base ebtables libvirt-dev
+
+echo "==> Instalar o Cockpit"
+sudo apt install -y cockpit cockpit-machines
+
+echo "==> Ligar o Libvirt"
+sudo systemctl enable --now libvirtd
+
+echo "==> Ligar o Cockpit"
+sudo systemctl enable --now cockpit.socket
+
+sudo gpasswd -a neo libvirt
+
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list
+rm microsoft.gpg
+sudo apt-get update
+sudo apt install -y code
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+sudo apt update
+sudo apt install -y google-chrome-stable
+
+cd src/vps/nfdos/box/nfdos/servidor
+sudo chmod +x compilar_nfdos.sh
+bash compilar_nfdos.sh
+# https://github.com/canonical/subiquity
+qemu-img create -f raw servidor.img +2G
+sudo virt-install --machine=virt \
+	--arch=aarch64 \
+	--boot loader=/usr/share/qemu-efi/QEMU_EFI.fd \
+	--name=servidor --virt-type=kvm --boot cdrom,hd \
+	--network=default,model=virtio \
+	--disk path=/var/lib/neoricalex/src/vps/nfdos/box/nfdos/servidor/servidor.img,format=raw,device=disk,bus=virtio,cache=none \
+	--memory=2048 --vcpu=1 --cdrom=/var/lib/neoricalex/src/vps/nfdos/box/nfdos/servidor/nfdos/core/nfdos.iso \
+	--graphics vnc,listen=10.228.68.8 \
+	--check all=off
+
+virsh autostart servidor
+#cd ../../../../..
+
+# https://www.xmodulo.com/use-kvm-command-line-debian-ubuntu.html
+# https://www.linuxtopic.com/2018/06/PXE-Boot-server-configuration-ubuntu.html
+# https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&ab_channel=CoreySchafer
+# https://github.com/siddharthsahu/django-docker
+# https://github.com/canonical/subiquity
+# https://gist.github.com/Mau5Machine/00401feb19433cf0387cc66c8e90c26c
+# 

@@ -1,0 +1,55 @@
+Source: qemu-web-desktop
+Section: science
+Priority: optional
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders: Roland Mas <lolando@debian.org>, Emmanuel Farhi <emmanuel.farhi@synchrotron-soleil.fr>
+Build-Depends: debhelper (>= 11), dh-apache2, dh-sysuser, pandoc
+Standards-Version: 4.1.2
+Vcs-Browser: https://salsa.debian.org/pan-team/qemu-web-desktop
+Vcs-Git: https://salsa.debian.org/pan-team/qemu-web-desktop.git
+Homepage: https://gitlab.com/soleil-data-treatment/soleil-software-projects/remote-desktop
+
+Package: qemu-web-desktop
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+  adduser,
+  apache2,
+  bridge-utils,
+  confget,
+  dnsmasq,
+  libguestfs-tools,
+  iptables,
+  libapache2-mod-perl2,
+  libapache2-mpm-itk,
+  libcgi-pm-perl,
+  libemail-valid-perl,
+  libguestfs-tools,
+  libjson-perl,
+  liblist-moreutils-perl,
+  libmail-imapclient-perl,
+  libnet-dns-perl,
+  libnet-ldap-perl,
+  libnet-smtps-perl,
+  libproc-background-perl,
+  libproc-processtable-perl,
+  libsys-cpuload-perl,
+  libsys-cpu-perl,
+  libsys-meminfo-perl,
+  libtext-qrcode-perl,
+  libwww-perl,
+  novnc,
+  qemu-system-arm [arm64],
+  qemu-system-ppc [ppc64el],
+  qemu-system-x86 [amd64],
+  websockify
+Recommends: ${misc:Recommends}
+Description: Remote desktop service with virtual machines in a browser.
+ The Data Analysis Remote Treatment Service (DARTS) launches virtual machines 
+ and displays them in your browser. Place virtual machine files (ISO, QCOW2, 
+ VDI, VMDK...) into /var/lib/qemu-web-desktop/machines, add their name in
+ the /etc/qemu-web-desktop/machines.conf file, and run qwdctl
+ refresh. You can tune the service settings in the
+ /etc/qemu-web-desktop/config.pl and activate some optional settings in 
+ /usr/share/qemu-web-desktop/html/desktop/index.html
+ .
+ Once installed, connect to http://localhost/qemu-web-desktop

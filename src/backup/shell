@@ -1,0 +1,44 @@
+#!/usr/bin/env sh
+
+source sh/funcoes.sh
+
+echo "Checkando se o disco do vps existe..."
+if [ ! -f "docker/discos/vps-v0.0.1.qcow2" ]; then
+
+    echo "==> Checkando se o Packer está instalado"
+    if ! command -v packer &> /dev/null;
+    then
+        bash packer/requerimentos.sh
+    fi
+
+    #validar_template_packer docker/vps.pkr.hcl
+    iniciar_projecto_packer docker/vars/docker.hcl docker/vps.pkr.hcl
+fi
+
+echo "Iniciando a infra..."
+if [ ! -f "terraform/vps" ]; then
+
+    terraform init
+    terraform plan -auto-approve -out=vps
+    terraform apply "vps"
+fi
+
+cd terraform
+terraform plan -auto-approve -out=vps
+terraform apply "vps"
+#terraform destroy "vps"
+
+
+# https://github.com/neoricalex/kvm_packer
+# https://computingforgeeks.com/how-to-provision-vms-on-kvm-with-terraform/
+# https://github.com/terraform-google-modules/terraform-google-bootstrap
+
+# https://blog.stephane-robert.info/docs/infra-as-code/provisionnement/terraform/premiere-infra/
+# https://github.com/terraform-google-modules/terraform-google-bootstrap
+# https://phoenixnap.com/kb/build-linux-kernel
+# https://linuxconfig.org/grub-compile-from-source-on-linux
+
+
+
+
+

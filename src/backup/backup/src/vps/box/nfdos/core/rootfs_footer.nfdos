@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo -e "$inicio_cor ==> Removendo pacotes desnecessários $fim_cor"
+apt autoremove -y
+apt autoclean -y
+
+echo -e "$inicio_cor ==> Finalizando o divert $fim_cor"
+truncate -s 0 /etc/machine-id
+rm /sbin/initctl
+dpkg-divert --rename --remove /sbin/initctl
+
+echo -e "$inicio_cor ==> Limpando eventuais resquícios da instalação/configuração $fim_cor"
+apt-get clean -y
+rm -rf /tmp/* ~/.bash_history
+
+echo -e "$inicio_cor ==> Desmontando o /proc /sys e /dev/pts $fim_cor"
+umount /proc
+umount /sys
+umount /dev/pts
+
+echo -e "$inicio_cor ==> Saindo do rootfs.nfdos $fim_cor"
+export HISTSIZE=0
+exit

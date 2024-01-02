@@ -1,0 +1,165 @@
+#!/bin/bash
+
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install -y curl wget unzip
+
+sudo apt install qemu-kvm ovmf -y
+sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm virtinst virt-manager
+
+sudo apt install -y curl wget unzip gpg
+
+echo "Checkando se o Virtualbox está instalado..."
+# Secure boot: https://askubuntu.com/questions/900118/vboxdrv-sh-failed-modprobe-vboxdrv-failed-please-use-dmesg-to-find-out-why
+if ! command -v vboxmanage &> /dev/null;
+then
+    echo "==> Instalar Virtualbox"
+    #Download
+    curl https://www.virtualbox.org/download/oracle_vbox_2016.asc | gpg --dearmor > oracle_vbox_2016.gpg
+    curl https://www.virtualbox.org/download/oracle_vbox.asc | gpg --dearmor > oracle_vbox.gpg
+
+    #Install on system
+    sudo install -o root -g root -m 644 oracle_vbox_2016.gpg /etc/apt/trusted.gpg.d/
+    sudo install -o root -g root -m 644 oracle_vbox.gpg /etc/apt/trusted.gpg.d/
+
+    echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+
+    sudo apt update
+    sudo apt install linux-headers-$(uname -r) dkms -y
+    sudo apt install virtualbox-7.0 -y
+
+    VER="7.0.12"
+    wget https://download.virtualbox.org/virtualbox/$VER/Oracle_VM_VirtualBox_Extension_Pack-$VER.vbox-extpack
+    sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-*.vbox-extpack --accept-license=33d7284dc4a0ece381196fda3cfe2ed0e1e8e7ed7f27b9a9ebc4ee22e24bd23c
+
+    rm oracle_vbox_2016.gpg oracle_vbox.gpg Oracle_VM_VirtualBox_Extension_Pack-$VER.vbox-extpack
+
+    sudo usermod -aG vboxusers $USER
+fi
+
+
+echo "Checkando se o Ruby está instalado..."   
+if ! command -v ruby &> /dev/null;
+then
+    rvm_ppa="rael-gc/rvm"
+
+    if ! grep -q "^deb .*$rvm_ppa" /etc/apt/sources.list /etc/apt/sources.list.d/*; then
+        sudo apt install software-properties-common -y
+        sudo apt-add-repository -y ppa:rael-gc/rvm
+        sudo apt-get update
+        sudo apt-get install rvm -y
+        sudo usermod -a -G rvm $USER
+        echo 'source "/etc/profile.d/rvm.sh"' >> ~/.bashrc
+        echo "Muitas mudanças foram feitas, scripts que precisam ser recarregados, e agora é membro do grupo rvm."
+        echo "Para que tudo funcione corretamente, você precisa reinicializar."
+        echo "Você vai ser automaticamente deslogado em 20 segundos..."
+        sleep 20
+        sudo pkill -KILL -u $USER
+    fi
+
+    rvm install ruby
+fi
+
+echo "Checkando se o packer está instalado..."
+if ! command -v packer &> /dev/null;
+then
+    echo "==> Instalar Packer"
+    currentd=$PWD
+    cd /tmp
+    latest=$(curl -L -s https://releases.hashicorp.com/packer | grep 'packer_' | sed 's/^.*<.*\">packer_\(.*\)<\/a>/\1/' | head -1)
+    wget https://releases.hashicorp.com/packer/${latest}/packer_${latest}_linux_amd64.zip
+    unzip packer*.zip
+    chmod +x packer
+    sudo mv packer /usr/local/bin/
+    cd $currentd
+
+    #packer plugins install github.com/hashicorp/qemu
+    packer plugins install github.com/hashicorp/ansible
+    packer plugins install github.com/hashicorp/vagrant
+    packer plugins install github.com/hashicorp/virtualbox
+
+
+fi
+
+echo "Checkando se o vagrant está instalado..."   
+if ! command -v vagrant &> /dev/null;
+then
+
+    wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+    sudo apt update && sudo apt install vagrant -y
+
+    echo "==> Instalar requerimentos dos plugins do Vagrant"
+
+    sudo cp /etc/apt/sources.list /etc/apt/sources.list."$(date +"%F")"
+    sudo sed -i -e '/^# deb-src.*universe$/s/# //g' /etc/apt/sources.list
+    sudo apt-get -y update
+
+    sudo apt-get -y build-dep vagrant 
+
+    #sudo apt-get -y install nfs-kernel-server
+    #sudo systemctl enable --now nfs-server
+
+    #sudo apt-get -y build-dep vagrant ruby-libvirt
+    #sudo apt-get -y install ebtables dnsmasq-base
+
+    #sudo apt install -y \
+    #    ruby-dev ruby-libvirt libxslt-dev libxml2-dev zlib1g-dev libvirt-dev zlib1g-dev
+
+    #vagrant plugin install vagrant-libvirt
+fi
+
+type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+    && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+    && sudo apt update \
+    && sudo apt install gh -y
+
+gh auth login
+gh auth setup-git
+git config --global user.name "neoricalex"
+git config --global user.email "neo.webmaster.2@gmail.com"
+
+
+echo "Checkando se a src/vps/box/vps.box existe..."
+if [ ! -f "src/vps/box/vps.box" ]; then
+    if [ -d "output-virtualbox-iso" ]; then
+        rm -rf output-virtualbox-iso
+    fi
+    if [ -d "src/vps/box/.vagrant" ]; then
+        rm -rf src/vps/box/.vagrant
+    fi
+    if [ -d "~/.vagrant.d/boxes/vps.box" ]; then
+        rm -rf ~/.vagrant.d/boxes/vps.box
+    fi
+    
+    PACKER_LOG=1 packer build src/vps/vps.json
+fi
+
+MACHINENAME=$1
+
+# Download debian.iso
+if [ ! -f ./debian.iso ]; then
+    wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.9.0-amd64-netinst.iso -O debian.iso
+fi
+
+#Create VM
+VBoxManage createvm --name $MACHINENAME --ostype "Debian_64" --register --basefolder `pwd`
+#Set memory and network
+VBoxManage modifyvm $MACHINENAME --ioapic on
+VBoxManage modifyvm $MACHINENAME --memory 1024 --vram 128
+VBoxManage modifyvm $MACHINENAME --nic1 nat
+#Create Disk and connect Debian Iso
+VBoxManage createhd --filename `pwd`/$MACHINENAME/$MACHINENAME_DISK.vdi --size 80000 --format VDI
+VBoxManage storagectl $MACHINENAME --name "SATA Controller" --add sata --controller IntelAhci
+VBoxManage storageattach $MACHINENAME --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium  `pwd`/$MACHINENAME/$MACHINENAME_DISK.vdi
+VBoxManage storagectl $MACHINENAME --name "IDE Controller" --add ide --controller PIIX4
+VBoxManage storageattach $MACHINENAME --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium `pwd`/debian.iso
+VBoxManage modifyvm $MACHINENAME --boot1 dvd --boot2 disk --boot3 none --boot4 none
+
+#Enable RDP
+VBoxManage modifyvm $MACHINENAME --vrde on
+VBoxManage modifyvm $MACHINENAME --vrdemulticon on --vrdeport 10001
+
+#Start the VM
+VBoxHeadless --startvm $MACHINENAME

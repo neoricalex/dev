@@ -1,0 +1,15 @@
+# Primary network interface
+auto wlp2s0
+iface wlp2s0 inet manual
+
+# Bridge definitions
+auto br1
+iface br1 inet static
+bridge_ports wlp2s0
+bridge_stp off
+address 172.16.54.149
+network 172.16.54.0
+netmask 255.255.255.0
+broadcast 172.16.54.255
+gateway 172.16.54.2
+dns-nameservers 172.16.54.2

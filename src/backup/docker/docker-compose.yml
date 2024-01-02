@@ -1,0 +1,13 @@
+version: "3"
+services:
+  neoricalex-vps:
+    build: ./
+    privileged: true
+    image: neoricalex/vps:latest
+    volumes:
+      - "./:/app"
+    ports:
+      - 5900-6000:5900-6000
+    environment:
+      PACKER_LOGS: "1"
+    # command: ["packer build -force -var-file vars/docker.hcl vps.pkr.hcl"]

@@ -1,0 +1,1286 @@
+[2023/11/23 22:12:59] 
+[2023/11/23 22:12:59] =========================================================
+[2023/11/23 22:12:59] =========================================================
+[2023/11/23 22:12:59] =============== VentoyGui x86_64 ===============
+[2023/11/23 22:12:59] =========================================================
+[2023/11/23 22:12:59] =========================================================
+[2023/11/23 22:12:59] log file is <log.txt>
+[2023/11/23 22:12:59] pid:2706 ppid:1225 uid:1000 euid:1000
+[2023/11/23 22:12:59] adjust dir:0  current path:/home/neo/Public/localhost/neoricalex/ventoy-1.0.96
+[2023/11/23 22:12:59] =========RAW ARGS BEGIN===========
+[2023/11/23 22:12:59] argv[0]=</home/neo/Public/localhost/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/23 22:12:59] =========RAW ARGS END===========
+[2023/11/23 22:12:59] uname -m <x86_64> 64bit
+[2023/11/23 22:12:59] Build bit is 64 (x86_64)
+[2023/11/23 22:12:59] Now detect the GUI type ...
+[2023/11/23 22:12:59] 952 libs found in cache format 1
+[2023/11/23 22:12:59] LIB:<libgtk-3.so.0>
+[2023/11/23 22:12:59] LIB:<libgtk-x11-2.0.so.0>
+[2023/11/23 22:12:59] ldconfig lib flags 0x3
+[2023/11/23 22:12:59] lib flags GLADE2:[NO] GTK2:[YES] GTK3:[YES] GTK4:[NO] QT4:[NO] QT5:[NO] QT6:[NO]
+[2023/11/23 22:12:59] This is gtk3 X environment.
+[2023/11/23 22:12:59] exe = /home/neo/Public/localhost/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3
+[2023/11/23 22:12:59] execute permission check success.
+[2023/11/23 22:12:59] EUID check failed.
+[2023/11/23 22:12:59] try restart self by pkexec ...
+[2023/11/23 22:12:59] Find pkexec at </usr/bin/pkexec>
+[2023/11/23 22:12:59] create environment param 51
+[2023/11/23 22:12:59] =========PKEXEC ARGS BEGIN===========
+[2023/11/23 22:12:59] argv[0]=</usr/bin/pkexec>
+[2023/11/23 22:12:59] argv[1]=</home/neo/Public/localhost/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/23 22:12:59] argv[2]=<_vtoy_env_str_=USER=neo
+XDG_SESSION_TYPE=x11
+SSH_AGENT_PID=1661
+SHLVL=0
+HOME=/home/neo
+DESKTOP_SESSION=ubuntu
+GNOME_SHELL_SESSION_MODE=ubuntu
+GTK_MODULES=gail:atk-bridge
+MANAGERPID=1225
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=d6cc1bd05dfd08828d5dfe8e65874d11
+DBUS_STARTER_BUS_TYPE=session
+LIBVIRT_DEFAULT_URI=qemu:///system
+GIO_LAUNCHED_DESKTOP_FILE_PID=2706
+IM_CONFIG_PHASE=1
+LOGNAME=neo
+_=/usr/bin/dbus-update-activation-environment
+JOURNAL_STREAM=8:45812
+rvm_bin_path=/usr/share/rvm/bin
+RUBY_VERSION=ruby-3.0.0
+IRBRC=/usr/share/rvm/rubies/ruby-3.0.0/.irbrc
+XDG_SESSION_CLASS=user
+USERNAME=neo
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+WINDOWPATH=2
+PATH=/usr/share/rvm/gems/ruby-3.0.0/bin:/usr/share/rvm/gems/ruby-3.0.0@global/bin:/usr/share/rvm/rubies/ruby-3.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/share/rvm/bin
+SESSION_MANAGER=local/notebook:@/tmp/.ICE-unix/1699,unix/notebook:/tmp/.ICE-unix/1699
+INVOCATION_ID=20bdc4d946d74cd69fc329d6bf055cc9
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+MY_RUBY_HOME=/usr/share/rvm/rubies/ruby-3.0.0
+DISPLAY=:0
+LANG=fr_FR.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XMODIFIERS=@im=ibus
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+XDG_SESSION_DESKTOP=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SHELL=/bin/bash
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+rvm_prefix=/usr/share
+GEM_HOME=/usr/share/rvm/gems/ruby-3.0.0
+rvm_version=1.29.12 (manual)
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+QT_IM_MODULE=ibus
+PWD=/home/neo/Public/localhost/neoricalex/ventoy-1.0.96
+GEM_PATH=/usr/share/rvm/gems/ruby-3.0.0:/usr/share/rvm/gems/ruby-3.0.0@global
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=d6cc1bd05dfd08828d5dfe8e65874d11
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+rvm_path=/usr/share/rvm
+>
+[2023/11/23 22:12:59] argv[3]=<_vtoy_gui_path_=/home/neo/Public/localhost/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/23 22:12:59] =========PKEXEC ARGS END===========
+[2023/11/23 22:13:07] 
+[2023/11/23 22:13:07] =========================================================
+[2023/11/23 22:13:07] =========================================================
+[2023/11/23 22:13:07] =============== VentoyGui x86_64 ===============
+[2023/11/23 22:13:07] =========================================================
+[2023/11/23 22:13:07] =========================================================
+[2023/11/23 22:13:07] log file is <log.txt>
+[2023/11/23 22:13:07] pid:2706 ppid:1225 uid:0 euid:0
+[2023/11/23 22:13:07] adjust dir:0  current path:/home/neo/Public/localhost/neoricalex/ventoy-1.0.96
+[2023/11/23 22:13:07] =========RAW ARGS BEGIN===========
+[2023/11/23 22:13:07] argv[0]=</home/neo/Public/localhost/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/23 22:13:07] argv[1]=<_vtoy_env_str_=USER=neo
+XDG_SESSION_TYPE=x11
+SSH_AGENT_PID=1661
+SHLVL=0
+HOME=/home/neo
+DESKTOP_SESSION=ubuntu
+GNOME_SHELL_SESSION_MODE=ubuntu
+GTK_MODULES=gail:atk-bridge
+MANAGERPID=1225
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=d6cc1bd05dfd08828d5dfe8e65874d11
+DBUS_STARTER_BUS_TYPE=session
+LIBVIRT_DEFAULT_URI=qemu:///system
+GIO_LAUNCHED_DESKTOP_FILE_PID=2706
+IM_CONFIG_PHASE=1
+LOGNAME=neo
+_=/usr/bin/dbus-update-activation-environment
+JOURNAL_STREAM=8:45812
+rvm_bin_path=/usr/share/rvm/bin
+RUBY_VERSION=ruby-3.0.0
+IRBRC=/usr/share/rvm/rubies/ruby-3.0.0/.irbrc
+XDG_SESSION_CLASS=user
+USERNAME=neo
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+WINDOWPATH=2
+PATH=/usr/share/rvm/gems/ruby-3.0.0/bin:/usr/share/rvm/gems/ruby-3.0.0@global/bin:/usr/share/rvm/rubies/ruby-3.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/share/rvm/bin
+SESSION_MANAGER=local/notebook:@/tmp/.ICE-unix/1699,unix/notebook:/tmp/.ICE-unix/1699
+INVOCATION_ID=20bdc4d946d74cd69fc329d6bf055cc9
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+MY_RUBY_HOME=/usr/share/rvm/rubies/ruby-3.0.0
+DISPLAY=:0
+LANG=fr_FR.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XMODIFIERS=@im=ibus
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+XDG_SESSION_DESKTOP=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SHELL=/bin/bash
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+rvm_prefix=/usr/share
+GEM_HOME=/usr/share/rvm/gems/ruby-3.0.0
+rvm_version=1.29.12 (manual)
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+QT_IM_MODULE=ibus
+PWD=/home/neo/Public/localhost/neoricalex/ventoy-1.0.96
+GEM_PATH=/usr/share/rvm/gems/ruby-3.0.0:/usr/share/rvm/gems/ruby-3.0.0@global
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=d6cc1bd05dfd08828d5dfe8e65874d11
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+rvm_path=/usr/share/rvm
+>
+[2023/11/23 22:13:07] argv[2]=<_vtoy_gui_path_=/home/neo/Public/localhost/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/23 22:13:07] =========RAW ARGS END===========
+[2023/11/23 22:13:07] recover environ 51 51
+[2023/11/23 22:13:07] recover success, argc=1 evecve </home/neo/Public/localhost/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/23 22:13:07] =========EXECVE ARGS BEGIN===========
+[2023/11/23 22:13:07] argv[0]=</home/neo/Public/localhost/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/23 22:13:07] =========EXECVE ARGS END===========
+[2023/11/23 22:13:07] ================================================
+[2023/11/23 22:13:07] ===== Ventoy2Disk 1.0.96 powered by GTK3.x =====
+[2023/11/23 22:13:07] ================================================
+[2023/11/23 22:13:07] log file is <log.txt> lastsize:7354
+[2023/11/23 22:13:07] ini file is <./Ventoy2Disk.ini>
+[2023/11/23 22:13:07] ventoy_disk_enumerate_all
+[2023/11/23 22:13:07] get disk info sdb
+[2023/11/23 22:13:07] is 4k native disk <sdb> <0>
+[2023/11/23 22:13:07] get disk size from sysfs for sdb
+[2023/11/23 22:13:07] ventoy_get_vtoy_data /dev/sdb
+[2023/11/23 22:13:07] Invalid mbr magic 0x0 0x0
+[2023/11/23 22:13:07] disk:</dev/sdb 8:16> model:< USB DISK 3.0 (USB)> size:15846080512 (16 GB)
+[2023/11/23 22:13:07] /dev/sdb NO Ventoy detected
+[2023/11/23 22:13:07] get disk info sda
+[2023/11/23 22:13:07] is 4k native disk <sda> <0>
+[2023/11/23 22:13:07] get disk size from sysfs for sda
+[2023/11/23 22:13:07] ventoy_get_vtoy_data /dev/sda
+[2023/11/23 22:13:07] Invalid efi part2 name <>
+[2023/11/23 22:13:07] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/23 22:13:07] /dev/sda NO Ventoy detected
+[2023/11/23 22:13:07] ============= DISK DUMP ============
+[2023/11/23 22:13:07] /dev/sdb [16 GB]  USB DISK 3.0 (USB)	Ventoy: NA
+[2023/11/23 22:13:07] /dev/sda [512 GB] ATA EMTEC X250 512GB (scsi)	Ventoy: NA
+[2023/11/23 22:13:07] on_init_window ...
+[2023/11/23 22:13:07] load_languages ...
+[2023/11/23 22:13:07] current language <English (English)>
+[2023/11/23 22:13:08] fill_dev_list total disk: 2 showall:0
+[2023/11/23 22:13:08] combox count:1, active:sdb id:0
+[2023/11/23 22:13:11] ventoy_disk_enumerate_all
+[2023/11/23 22:13:11] get disk info sdb
+[2023/11/23 22:13:11] is 4k native disk <sdb> <0>
+[2023/11/23 22:13:11] get disk size from sysfs for sdb
+[2023/11/23 22:13:11] ventoy_get_vtoy_data /dev/sdb
+[2023/11/23 22:13:11] Invalid mbr magic 0x0 0x0
+[2023/11/23 22:13:11] disk:</dev/sdb 8:16> model:< USB DISK 3.0 (USB)> size:15846080512 (16 GB)
+[2023/11/23 22:13:11] /dev/sdb NO Ventoy detected
+[2023/11/23 22:13:11] get disk info sda
+[2023/11/23 22:13:11] is 4k native disk <sda> <0>
+[2023/11/23 22:13:11] get disk size from sysfs for sda
+[2023/11/23 22:13:11] ventoy_get_vtoy_data /dev/sda
+[2023/11/23 22:13:11] Invalid efi part2 name <>
+[2023/11/23 22:13:11] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/23 22:13:11] /dev/sda NO Ventoy detected
+[2023/11/23 22:13:11] fill_dev_list total disk: 2 showall:0
+[2023/11/23 22:13:11] combox count:1, active:sdb id:0
+[2023/11/23 22:13:50] install_thread ...
+[2023/11/23 22:13:50] ==================================================================================
+[2023/11/23 22:13:50] ===== ventoy install /dev/sdb style:GPT secureboot:1 align4K:1 reserve:0 =========
+[2023/11/23 22:13:50] ==================================================================================
+[2023/11/23 22:13:50] disk is not mounted now, we can do the install ...
+[2023/11/23 22:13:50] start install thread  USB DISK 3.0 (USB) ...
+[2023/11/23 22:13:50] func handler install <{ "result" : "success" }>
+[2023/11/23 22:13:50] ventoy_install_thread run ...
+[2023/11/23 22:13:50] check disk sdb
+[2023/11/23 22:13:50] set percent 1
+[2023/11/23 22:13:50] disk is not mounted now, we can do continue ...
+[2023/11/23 22:13:50] ventoy_clean_disk fd:8 size:15846080512
+[2023/11/23 22:13:50] write disk at off:0 writelen:65536 datalen:65536
+[2023/11/23 22:13:50] write disk at off:15846014976 writelen:65536 datalen:65536
+[2023/11/23 22:13:50] read core.img.xz rc:0 len:455196
+[2023/11/23 22:13:50] ventoy_unxz_stg1_img len:455196 rc:0
+[2023/11/23 22:13:50] set percent 8
+[2023/11/23 22:13:50] read disk.img.xz rc:0 len:13456512
+[2023/11/23 22:13:50] set percent 8
+[2023/11/23 22:13:50] set percent 12
+[2023/11/23 22:13:50] set percent 16
+[2023/11/23 22:13:50] set percent 17
+[2023/11/23 22:13:50] set percent 20
+[2023/11/23 22:13:50] set percent 25
+[2023/11/23 22:13:50] set percent 32
+[2023/11/23 22:13:50] set percent 35
+[2023/11/23 22:13:50] set percent 38
+[2023/11/23 22:13:50] set percent 41
+[2023/11/23 22:13:50] set percent 46
+[2023/11/23 22:13:50] set percent 50
+[2023/11/23 22:13:51] set percent 56
+[2023/11/23 22:13:51] ventoy_unxz_efipart_img len:13456512 rc:0 unxzlen:33554432
+[2023/11/23 22:13:51] Fill GPT part table
+[2023/11/23 22:13:51] Disk signature: 0x6d2e3b54
+[2023/11/23 22:13:51] Part1SectorCount:30881759 is not aligned by 4KB (7)
+[2023/11/23 22:13:51] Disk need to align with 4KB 7
+[2023/11/23 22:13:51] Part1StartSector:2048 Part1SectorCount:30881752 Part2StartSector:30883800
+[2023/11/23 22:13:51] Wait for format part1 (partstyle changed) ...
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:51] set percent 59
+[2023/11/23 22:13:52] set percent 59
+[2023/11/23 22:13:52] Formatting part1 exFAT /dev/sdb ...
+[0123/11/23 22:13:52] Creating... 
+[0123/11/23 22:13:52] Flushing... 
+[2023/11/23 22:13:52] set percent 61
+[2023/11/23 22:13:52] Formatting part2 EFI ...
+[2023/11/23 22:13:52] Formatting part2 EFI offset:15812505600 ...
+[2023/11/23 22:13:52] VentoyProcSecureBoot 1 ...
+[2023/11/23 22:13:52] Secure boot is enabled ...
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] set percent 67
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/23 22:13:52] Writing legacy grub ...
+[2023/11/23 22:13:52] Write GPT stage1 ...
+[2023/11/23 22:13:52] lseek offset:17408(17408) writelen:1031168(1031168)
+[2023/11/23 22:13:52] fsync data1...
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:52] set percent 80
+[2023/11/23 22:13:53] set percent 80
+[2023/11/23 22:13:53] set percent 80
+[2023/11/23 22:13:53] set percent 80
+[2023/11/23 22:13:53] set percent 80
+[2023/11/23 22:13:53] set percent 80
+[2023/11/23 22:13:53] set percent 80
+[2023/11/23 22:13:53] set percent 80
+[2023/11/23 22:13:53] Checking part2 efi data /dev/sdb ...
+[2023/11/23 22:13:53] set percent 82
+[2023/11/23 22:13:53] set percent 83
+[2023/11/23 22:13:53] set percent 85
+[2023/11/23 22:13:53] set percent 88
+[2023/11/23 22:13:53] set percent 90
+[2023/11/23 22:13:53] set percent 91
+[2023/11/23 22:13:53] efi part data check success
+[2023/11/23 22:13:53] Writting Partition Table style:1...
+[2023/11/23 22:13:53] write backup gpt part table off:15846080000 len:512
+[2023/11/23 22:13:53] write main gpt part table off:15846063616 len:16384
+[2023/11/23 22:13:53] write gpt part head off:0 len:17408
+[2023/11/23 22:13:53] fsync data2...
+[2023/11/23 22:13:53] set percent 98
+[2023/11/23 22:13:53] ====================================
+[2023/11/23 22:13:53] ====== ventoy install success ======
+[2023/11/23 22:13:53] ====================================
+[2023/11/23 22:13:53] set percent 100
+[2023/11/23 22:13:53] ventoy_disk_enumerate_all
+[2023/11/23 22:13:53] get disk info sdb
+[2023/11/23 22:13:53] is 4k native disk <sdb> <0>
+[2023/11/23 22:13:53] get disk size from sysfs for sdb
+[2023/11/23 22:13:53] ventoy_get_vtoy_data /dev/sdb
+[2023/11/23 22:13:53] ventoy partition layout check OK: [2048 30881752] [30883800 65536]
+[2023/11/23 22:13:53] now check secure boot for /dev/sdb ...
+[2023/11/23 22:13:53] /EFI/BOOT/grubx64_real.efi find, secure boot in enabled
+[2023/11/23 22:13:53] disk:</dev/sdb 8:16> model:< USB DISK 3.0 (USB)> size:15846080512 (16 GB)
+[2023/11/23 22:13:53] /dev/sdb Ventoy:<1.0.96> GPT secureboot:1 preserve:3584
+[2023/11/23 22:13:53] get disk info sda
+[2023/11/23 22:13:53] is 4k native disk <sda> <0>
+[2023/11/23 22:13:53] get disk size from sysfs for sda
+[2023/11/23 22:13:53] ventoy_get_vtoy_data /dev/sda
+[2023/11/23 22:13:53] Invalid efi part2 name <>
+[2023/11/23 22:13:53] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/23 22:13:53] /dev/sda NO Ventoy detected
+[2023/11/23 22:13:56] set percent 0
+[2023/11/23 22:13:56] fill_dev_list total disk: 2 showall:0
+[2023/11/23 22:13:56] combox count:1, active:sdb id:0
+[2023/11/23 22:14:03] on_exit_window ...
+[2023/11/23 22:14:03] ######## Ventoy2Disk GTK 1.0.96 exit ########
+[2023/11/25 05:22:19] 
+[2023/11/25 05:22:19] =========================================================
+[2023/11/25 05:22:19] =========================================================
+[2023/11/25 05:22:19] =============== VentoyGui x86_64 ===============
+[2023/11/25 05:22:19] =========================================================
+[2023/11/25 05:22:19] =========================================================
+[2023/11/25 05:22:19] log file is <log.txt>
+[2023/11/25 05:22:19] pid:50066 ppid:2486 uid:1000 euid:1000
+[2023/11/25 05:22:19] adjust dir:0  current path:/home/neo/Public/neoricalex/ventoy-1.0.96
+[2023/11/25 05:22:19] =========RAW ARGS BEGIN===========
+[2023/11/25 05:22:19] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:22:19] =========RAW ARGS END===========
+[2023/11/25 05:22:19] uname -m <x86_64> 64bit
+[2023/11/25 05:22:19] Build bit is 64 (x86_64)
+[2023/11/25 05:22:19] Now detect the GUI type ...
+[2023/11/25 05:22:19] 1009 libs found in cache format 1
+[2023/11/25 05:22:19] LIB:<libgtk-4.so.1>
+[2023/11/25 05:22:19] LIB:<libgtk-3.so.0>
+[2023/11/25 05:22:19] LIB:<libgtk-x11-2.0.so.0>
+[2023/11/25 05:22:19] ldconfig lib flags 0x7
+[2023/11/25 05:22:19] lib flags GLADE2:[NO] GTK2:[YES] GTK3:[YES] GTK4:[YES] QT4:[NO] QT5:[NO] QT6:[NO]
+[2023/11/25 05:22:19] This is gtk3 X environment.
+[2023/11/25 05:22:19] exe = /home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3
+[2023/11/25 05:22:19] execute permission check success.
+[2023/11/25 05:22:19] EUID check failed.
+[2023/11/25 05:22:19] try restart self by pkexec ...
+[2023/11/25 05:22:19] Find pkexec at </usr/bin/pkexec>
+[2023/11/25 05:22:19] create environment param 43
+[2023/11/25 05:22:19] =========PKEXEC ARGS BEGIN===========
+[2023/11/25 05:22:19] argv[0]=</usr/bin/pkexec>
+[2023/11/25 05:22:19] argv[1]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:22:19] argv[2]=<_vtoy_env_str_=USER=neo
+XDG_SESSION_TYPE=wayland
+SHLVL=0
+HOME=/home/neo
+DESKTOP_SESSION=ubuntu
+GTK_MODULES=gail:atk-bridge
+GNOME_SHELL_SESSION_MODE=ubuntu
+MANAGERPID=2486
+SYSTEMD_EXEC_PID=2888
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+DBUS_STARTER_BUS_TYPE=session
+LIBVIRT_DEFAULT_URI=qemu:///system
+GIO_LAUNCHED_DESKTOP_FILE_PID=50066
+IM_CONFIG_PHASE=1
+WAYLAND_DISPLAY=wayland-0
+LOGNAME=neo
+JOURNAL_STREAM=8:32300
+_=/usr/bin/gnome-session
+XDG_SESSION_CLASS=user
+USERNAME=neo
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+SESSION_MANAGER=local/notebook:@/tmp/.ICE-unix/2888,unix/notebook:/tmp/.ICE-unix/2888
+INVOCATION_ID=03b9e63285984ffb8049a2f31e802c4e
+GNOME_SETUP_DISPLAY=:1
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+DISPLAY=:0
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+LANG=fr_FR.UTF-8
+XMODIFIERS=@im=ibus
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.ZIWEG2
+XDG_SESSION_DESKTOP=ubuntu
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SHELL=/bin/bash
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+QT_IM_MODULE=ibus
+PWD=/home/neo/Public/neoricalex/ventoy-1.0.96
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+>
+[2023/11/25 05:22:19] argv[3]=<_vtoy_gui_path_=/home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:22:19] =========PKEXEC ARGS END===========
+[2023/11/25 05:22:26] 
+[2023/11/25 05:22:26] =========================================================
+[2023/11/25 05:22:26] =========================================================
+[2023/11/25 05:22:26] =============== VentoyGui x86_64 ===============
+[2023/11/25 05:22:26] =========================================================
+[2023/11/25 05:22:26] =========================================================
+[2023/11/25 05:22:26] log file is <log.txt>
+[2023/11/25 05:22:26] pid:50066 ppid:2486 uid:0 euid:0
+[2023/11/25 05:22:26] adjust dir:0  current path:/home/neo/Public/neoricalex/ventoy-1.0.96
+[2023/11/25 05:22:26] =========RAW ARGS BEGIN===========
+[2023/11/25 05:22:26] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:22:26] argv[1]=<_vtoy_env_str_=USER=neo
+XDG_SESSION_TYPE=wayland
+SHLVL=0
+HOME=/home/neo
+DESKTOP_SESSION=ubuntu
+GTK_MODULES=gail:atk-bridge
+GNOME_SHELL_SESSION_MODE=ubuntu
+MANAGERPID=2486
+SYSTEMD_EXEC_PID=2888
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+DBUS_STARTER_BUS_TYPE=session
+LIBVIRT_DEFAULT_URI=qemu:///system
+GIO_LAUNCHED_DESKTOP_FILE_PID=50066
+IM_CONFIG_PHASE=1
+WAYLAND_DISPLAY=wayland-0
+LOGNAME=neo
+JOURNAL_STREAM=8:32300
+_=/usr/bin/gnome-session
+XDG_SESSION_CLASS=user
+USERNAME=neo
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+SESSION_MANAGER=local/notebook:@/tmp/.ICE-unix/2888,unix/notebook:/tmp/.ICE-unix/2888
+INVOCATION_ID=03b9e63285984ffb8049a2f31e802c4e
+GNOME_SETUP_DISPLAY=:1
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+DISPLAY=:0
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+LANG=fr_FR.UTF-8
+XMODIFIERS=@im=ibus
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.ZIWEG2
+XDG_SESSION_DESKTOP=ubuntu
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SHELL=/bin/bash
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+QT_IM_MODULE=ibus
+PWD=/home/neo/Public/neoricalex/ventoy-1.0.96
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+>
+[2023/11/25 05:22:26] argv[2]=<_vtoy_gui_path_=/home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:22:26] =========RAW ARGS END===========
+[2023/11/25 05:22:26] recover environ 43 43
+[2023/11/25 05:22:26] recover success, argc=1 evecve </home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:22:26] =========EXECVE ARGS BEGIN===========
+[2023/11/25 05:22:26] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:22:26] =========EXECVE ARGS END===========
+[2023/11/25 05:22:26] ================================================
+[2023/11/25 05:22:26] ===== Ventoy2Disk 1.0.96 powered by GTK3.x =====
+[2023/11/25 05:22:26] ================================================
+[2023/11/25 05:22:26] log file is <log.txt> lastsize:25297
+[2023/11/25 05:22:26] ini file is <./Ventoy2Disk.ini>
+[2023/11/25 05:22:26] ventoy_disk_enumerate_all
+[2023/11/25 05:22:26] get disk info sdb
+[2023/11/25 05:22:26] is 4k native disk <sdb> <0>
+[2023/11/25 05:22:26] get disk size from sysfs for sdb
+[2023/11/25 05:22:26] ventoy_get_vtoy_data /dev/sdb
+[2023/11/25 05:22:26] ventoy partition layout check OK: [2048 18298840] [18300888 65536]
+[2023/11/25 05:22:26] now check secure boot for /dev/sdb ...
+[2023/11/25 05:22:26] /EFI/BOOT/grubx64_real.efi find, secure boot in enabled
+[2023/11/25 05:22:26] disk:</dev/sdb 8:16> model:< USB DISK 3.0 (USB)> size:15846080512 (16 GB)
+[2023/11/25 05:22:26] /dev/sdb Ventoy:<1.0.96> GPT secureboot:1 preserve:6442454528
+[2023/11/25 05:22:26] get disk info zd0
+[2023/11/25 05:22:26] is 4k native disk <zd0> <0>
+[2023/11/25 05:22:26] get disk size from sysfs for zd0
+[2023/11/25 05:22:26] /sys/block/zd0/device/vendor not exist 
+[2023/11/25 05:22:26] /sys/block/zd0/device/model not exist 
+[2023/11/25 05:22:26] ventoy_get_vtoy_data /dev/zd0
+[2023/11/25 05:22:26] Invalid mbr magic 0x0 0x0
+[2023/11/25 05:22:26] disk:</dev/zd0 230:0> model:<  (unknown)> size:524288000 (0 GB)
+[2023/11/25 05:22:26] /dev/zd0 NO Ventoy detected
+[2023/11/25 05:22:26] get disk info sda
+[2023/11/25 05:22:26] is 4k native disk <sda> <0>
+[2023/11/25 05:22:26] get disk size from sysfs for sda
+[2023/11/25 05:22:26] ventoy_get_vtoy_data /dev/sda
+[2023/11/25 05:22:26] Invalid efi part2 name <>
+[2023/11/25 05:22:26] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/25 05:22:26] /dev/sda NO Ventoy detected
+[2023/11/25 05:22:26] ============= DISK DUMP ============
+[2023/11/25 05:22:26] /dev/sdb [16 GB]  USB DISK 3.0 (USB)	Ventoy: 1.0.96 GPT secureboot:1 preserve:6442454528
+[2023/11/25 05:22:26] /dev/sda [512 GB] ATA EMTEC X250 512GB (scsi)	Ventoy: NA
+[2023/11/25 05:22:26] /dev/zd0 [0 GB]   (unknown)	Ventoy: NA
+[2023/11/25 05:22:26] on_init_window ...
+[2023/11/25 05:22:26] load_languages ...
+[2023/11/25 05:22:26] current language <English (English)>
+[2023/11/25 05:22:26] fill_dev_list total disk: 3 showall:0
+[2023/11/25 05:22:26] combox count:1, active:sdb id:0
+[2023/11/25 05:23:50] install_thread ...
+[2023/11/25 05:23:50] ==================================================================================
+[2023/11/25 05:23:50] ===== ventoy install /dev/sdb style:MBR secureboot:1 align4K:1 reserve:4294967296 =========
+[2023/11/25 05:23:50] ==================================================================================
+[2023/11/25 05:23:50] /dev/sdb mounted </dev/sdb2 /media/neo/VTOYEFI vfat rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,showexec,utf8,flush,errors=remount-ro 0 0
+>
+[2023/11/25 05:23:50] disk is mounted, now try to unmount it ...
+[2023/11/25 05:23:50] umount </dev/sdb> </media/neo/VTOYEFI> [ success ]
+[2023/11/25 05:23:50] umount </dev/sdb> </media/neo/Ventoy> [ success ]
+[2023/11/25 05:23:50] disk is not mounted now, we can do the install ...
+[2023/11/25 05:23:50] start install thread  USB DISK 3.0 (USB) ...
+[2023/11/25 05:23:50] func handler install <{ "result" : "success" }>
+[2023/11/25 05:23:50] set percent 1
+[2023/11/25 05:23:50] ventoy_install_thread run ...
+[2023/11/25 05:23:50] check disk sdb
+[2023/11/25 05:23:50] disk is not mounted now, we can do continue ...
+[2023/11/25 05:23:50] ventoy_clean_disk fd:7 size:15846080512
+[2023/11/25 05:23:50] write disk at off:0 writelen:65536 datalen:65536
+[2023/11/25 05:23:50] write disk at off:15846014976 writelen:65536 datalen:65536
+[2023/11/25 05:23:50] read core.img.xz rc:0 len:455196
+[2023/11/25 05:23:50] ventoy_unxz_stg1_img len:455196 rc:0
+[2023/11/25 05:23:50] set percent 8
+[2023/11/25 05:23:50] read disk.img.xz rc:0 len:13456512
+[2023/11/25 05:23:50] set percent 8
+[2023/11/25 05:23:50] set percent 11
+[2023/11/25 05:23:50] set percent 14
+[2023/11/25 05:23:50] set percent 16
+[2023/11/25 05:23:50] set percent 19
+[2023/11/25 05:23:50] set percent 24
+[2023/11/25 05:23:51] set percent 29
+[2023/11/25 05:23:51] set percent 32
+[2023/11/25 05:23:51] set percent 35
+[2023/11/25 05:23:51] set percent 40
+[2023/11/25 05:23:51] set percent 43
+[2023/11/25 05:23:51] set percent 48
+[2023/11/25 05:23:51] set percent 51
+[2023/11/25 05:23:51] ventoy_unxz_efipart_img len:13456512 rc:0 unxzlen:33554432
+[2023/11/25 05:23:51] Fill MBR part table
+[2023/11/25 05:23:51] Disk signature: 0x5abb459a
+[2023/11/25 05:23:51] no need to align with 4KB
+[2023/11/25 05:23:51] ReservedSector: 8388608
+[2023/11/25 05:23:51] Part1StartSector:2048 Part1SectorCount:22493184 Part2StartSector:22495232
+[2023/11/25 05:23:51] Wait for format part1 (partstyle changed) ...
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:51] set percent 59
+[2023/11/25 05:23:52] set percent 59
+[2023/11/25 05:23:52] set percent 59
+[2023/11/25 05:23:52] set percent 59
+[2023/11/25 05:23:52] set percent 59
+[2023/11/25 05:23:52] set percent 59
+[2023/11/25 05:23:52] set percent 59
+[2023/11/25 05:23:52] set percent 59
+[2023/11/25 05:23:52] Formatting part1 exFAT /dev/sdb ...
+[0123/11/25 05:23:52] Creating... 
+[2023/11/25 05:23:52] set percent 61
+[0123/11/25 05:23:52] Flushing... 
+[2023/11/25 05:23:52] set percent 61
+[2023/11/25 05:23:52] Formatting part2 EFI ...
+[2023/11/25 05:23:52] Formatting part2 EFI offset:11517558784 ...
+[2023/11/25 05:23:52] VentoyProcSecureBoot 1 ...
+[2023/11/25 05:23:52] Secure boot is enabled ...
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] set percent 74
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:23:52] Writing legacy grub ...
+[2023/11/25 05:23:52] Write MBR stage1 ...
+[2023/11/25 05:23:52] lseek offset:512(512) writelen:1048064(1048064)
+[2023/11/25 05:23:52] fsync data1...
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:52] set percent 80
+[2023/11/25 05:23:53] set percent 80
+[2023/11/25 05:23:53] set percent 80
+[2023/11/25 05:23:53] set percent 80
+[2023/11/25 05:23:53] set percent 80
+[2023/11/25 05:23:53] set percent 80
+[2023/11/25 05:23:53] set percent 80
+[2023/11/25 05:23:53] set percent 80
+[2023/11/25 05:23:53] set percent 80
+[2023/11/25 05:23:53] Checking part2 efi data /dev/sdb ...
+[2023/11/25 05:23:53] set percent 82
+[2023/11/25 05:23:53] set percent 83
+[2023/11/25 05:23:53] set percent 87
+[2023/11/25 05:23:53] set percent 88
+[2023/11/25 05:23:53] set percent 90
+[2023/11/25 05:23:53] set percent 93
+[2023/11/25 05:23:53] efi part data check success
+[2023/11/25 05:23:53] Writting Partition Table style:0...
+[2023/11/25 05:23:53] Writting MBR Partition Table 0 512
+[2023/11/25 05:23:53] fsync data2...
+[2023/11/25 05:23:53] ====================================
+[2023/11/25 05:23:53] ====== ventoy install success ======
+[2023/11/25 05:23:53] ====================================
+[2023/11/25 05:23:53] set percent 100
+[2023/11/25 05:23:53] ventoy_disk_enumerate_all
+[2023/11/25 05:23:53] get disk info sdb
+[2023/11/25 05:23:53] is 4k native disk <sdb> <0>
+[2023/11/25 05:23:53] get disk size from sysfs for sdb
+[2023/11/25 05:23:53] ventoy_get_vtoy_data /dev/sdb
+[2023/11/25 05:23:53] ventoy partition layout check OK: [2048 22493184] [22495232 65536]
+[2023/11/25 05:23:53] now check secure boot for /dev/sdb ...
+[2023/11/25 05:23:53] /EFI/BOOT/grubx64_real.efi find, secure boot in enabled
+[2023/11/25 05:23:53] disk:</dev/sdb 8:16> model:< USB DISK 3.0 (USB)> size:15846080512 (16 GB)
+[2023/11/25 05:23:53] /dev/sdb Ventoy:<1.0.96> MBR secureboot:1 preserve:4294967296
+[2023/11/25 05:23:53] get disk info zd0
+[2023/11/25 05:23:53] is 4k native disk <zd0> <0>
+[2023/11/25 05:23:53] get disk size from sysfs for zd0
+[2023/11/25 05:23:53] /sys/block/zd0/device/vendor not exist 
+[2023/11/25 05:23:53] /sys/block/zd0/device/model not exist 
+[2023/11/25 05:23:53] ventoy_get_vtoy_data /dev/zd0
+[2023/11/25 05:23:53] Invalid mbr magic 0x0 0x0
+[2023/11/25 05:23:53] disk:</dev/zd0 230:0> model:<  (unknown)> size:524288000 (0 GB)
+[2023/11/25 05:23:53] /dev/zd0 NO Ventoy detected
+[2023/11/25 05:23:53] get disk info sda
+[2023/11/25 05:23:53] is 4k native disk <sda> <0>
+[2023/11/25 05:23:53] get disk size from sysfs for sda
+[2023/11/25 05:23:53] ventoy_get_vtoy_data /dev/sda
+[2023/11/25 05:23:53] Invalid efi part2 name <>
+[2023/11/25 05:23:53] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/25 05:23:53] /dev/sda NO Ventoy detected
+[2023/11/25 05:23:56] set percent 0
+[2023/11/25 05:23:56] fill_dev_list total disk: 3 showall:0
+[2023/11/25 05:23:56] combox count:1, active:sdb id:0
+[2023/11/25 05:24:00] on_exit_window ...
+[2023/11/25 05:24:00] ######## Ventoy2Disk GTK 1.0.96 exit ########
+[2023/11/25 05:25:55] 
+[2023/11/25 05:25:55] =========================================================
+[2023/11/25 05:25:55] =========================================================
+[2023/11/25 05:25:55] =============== VentoyGui x86_64 ===============
+[2023/11/25 05:25:55] =========================================================
+[2023/11/25 05:25:55] =========================================================
+[2023/11/25 05:25:55] log file is <log.txt>
+[2023/11/25 05:25:55] pid:52622 ppid:2486 uid:1000 euid:1000
+[2023/11/25 05:25:55] adjust dir:0  current path:/home/neo/Public/neoricalex/ventoy-1.0.96
+[2023/11/25 05:25:55] =========RAW ARGS BEGIN===========
+[2023/11/25 05:25:55] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:25:55] =========RAW ARGS END===========
+[2023/11/25 05:25:55] uname -m <x86_64> 64bit
+[2023/11/25 05:25:55] Build bit is 64 (x86_64)
+[2023/11/25 05:25:55] Now detect the GUI type ...
+[2023/11/25 05:25:55] 1009 libs found in cache format 1
+[2023/11/25 05:25:55] LIB:<libgtk-4.so.1>
+[2023/11/25 05:25:55] LIB:<libgtk-3.so.0>
+[2023/11/25 05:25:55] LIB:<libgtk-x11-2.0.so.0>
+[2023/11/25 05:25:55] ldconfig lib flags 0x7
+[2023/11/25 05:25:55] lib flags GLADE2:[NO] GTK2:[YES] GTK3:[YES] GTK4:[YES] QT4:[NO] QT5:[NO] QT6:[NO]
+[2023/11/25 05:25:55] This is gtk3 X environment.
+[2023/11/25 05:25:55] exe = /home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3
+[2023/11/25 05:25:55] execute permission check success.
+[2023/11/25 05:25:55] EUID check failed.
+[2023/11/25 05:25:55] try restart self by pkexec ...
+[2023/11/25 05:25:55] Find pkexec at </usr/bin/pkexec>
+[2023/11/25 05:25:55] create environment param 43
+[2023/11/25 05:25:55] =========PKEXEC ARGS BEGIN===========
+[2023/11/25 05:25:55] argv[0]=</usr/bin/pkexec>
+[2023/11/25 05:25:55] argv[1]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:25:55] argv[2]=<_vtoy_env_str_=USER=neo
+XDG_SESSION_TYPE=wayland
+SHLVL=0
+HOME=/home/neo
+DESKTOP_SESSION=ubuntu
+GTK_MODULES=gail:atk-bridge
+GNOME_SHELL_SESSION_MODE=ubuntu
+MANAGERPID=2486
+SYSTEMD_EXEC_PID=2888
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+DBUS_STARTER_BUS_TYPE=session
+LIBVIRT_DEFAULT_URI=qemu:///system
+GIO_LAUNCHED_DESKTOP_FILE_PID=52622
+IM_CONFIG_PHASE=1
+WAYLAND_DISPLAY=wayland-0
+LOGNAME=neo
+JOURNAL_STREAM=8:32300
+_=/usr/bin/gnome-session
+XDG_SESSION_CLASS=user
+USERNAME=neo
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+SESSION_MANAGER=local/notebook:@/tmp/.ICE-unix/2888,unix/notebook:/tmp/.ICE-unix/2888
+INVOCATION_ID=03b9e63285984ffb8049a2f31e802c4e
+GNOME_SETUP_DISPLAY=:1
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+DISPLAY=:0
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+LANG=fr_FR.UTF-8
+XMODIFIERS=@im=ibus
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.ZIWEG2
+XDG_SESSION_DESKTOP=ubuntu
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SHELL=/bin/bash
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+QT_IM_MODULE=ibus
+PWD=/home/neo/Public/neoricalex/ventoy-1.0.96
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+>
+[2023/11/25 05:25:55] argv[3]=<_vtoy_gui_path_=/home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:25:55] =========PKEXEC ARGS END===========
+[2023/11/25 05:26:03] 
+[2023/11/25 05:26:03] =========================================================
+[2023/11/25 05:26:03] =========================================================
+[2023/11/25 05:26:03] =============== VentoyGui x86_64 ===============
+[2023/11/25 05:26:03] =========================================================
+[2023/11/25 05:26:03] =========================================================
+[2023/11/25 05:26:03] log file is <log.txt>
+[2023/11/25 05:26:03] pid:52622 ppid:2486 uid:0 euid:0
+[2023/11/25 05:26:03] adjust dir:0  current path:/home/neo/Public/neoricalex/ventoy-1.0.96
+[2023/11/25 05:26:03] =========RAW ARGS BEGIN===========
+[2023/11/25 05:26:03] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:26:03] argv[1]=<_vtoy_env_str_=USER=neo
+XDG_SESSION_TYPE=wayland
+SHLVL=0
+HOME=/home/neo
+DESKTOP_SESSION=ubuntu
+GTK_MODULES=gail:atk-bridge
+GNOME_SHELL_SESSION_MODE=ubuntu
+MANAGERPID=2486
+SYSTEMD_EXEC_PID=2888
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+DBUS_STARTER_BUS_TYPE=session
+LIBVIRT_DEFAULT_URI=qemu:///system
+GIO_LAUNCHED_DESKTOP_FILE_PID=52622
+IM_CONFIG_PHASE=1
+WAYLAND_DISPLAY=wayland-0
+LOGNAME=neo
+JOURNAL_STREAM=8:32300
+_=/usr/bin/gnome-session
+XDG_SESSION_CLASS=user
+USERNAME=neo
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+SESSION_MANAGER=local/notebook:@/tmp/.ICE-unix/2888,unix/notebook:/tmp/.ICE-unix/2888
+INVOCATION_ID=03b9e63285984ffb8049a2f31e802c4e
+GNOME_SETUP_DISPLAY=:1
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+DISPLAY=:0
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+LANG=fr_FR.UTF-8
+XMODIFIERS=@im=ibus
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.ZIWEG2
+XDG_SESSION_DESKTOP=ubuntu
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SHELL=/bin/bash
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+QT_IM_MODULE=ibus
+PWD=/home/neo/Public/neoricalex/ventoy-1.0.96
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+>
+[2023/11/25 05:26:03] argv[2]=<_vtoy_gui_path_=/home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:26:03] =========RAW ARGS END===========
+[2023/11/25 05:26:03] recover environ 43 43
+[2023/11/25 05:26:03] recover success, argc=1 evecve </home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:26:03] =========EXECVE ARGS BEGIN===========
+[2023/11/25 05:26:03] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:26:03] =========EXECVE ARGS END===========
+[2023/11/25 05:26:03] ================================================
+[2023/11/25 05:26:03] ===== Ventoy2Disk 1.0.96 powered by GTK3.x =====
+[2023/11/25 05:26:03] ================================================
+[2023/11/25 05:26:03] log file is <log.txt> lastsize:43662
+[2023/11/25 05:26:03] ini file is <./Ventoy2Disk.ini>
+[2023/11/25 05:26:03] ventoy_disk_enumerate_all
+[2023/11/25 05:26:03] get disk info zd0
+[2023/11/25 05:26:03] is 4k native disk <zd0> <0>
+[2023/11/25 05:26:03] get disk size from sysfs for zd0
+[2023/11/25 05:26:03] /sys/block/zd0/device/vendor not exist 
+[2023/11/25 05:26:03] /sys/block/zd0/device/model not exist 
+[2023/11/25 05:26:03] ventoy_get_vtoy_data /dev/zd0
+[2023/11/25 05:26:03] Invalid mbr magic 0x0 0x0
+[2023/11/25 05:26:03] disk:</dev/zd0 230:0> model:<  (unknown)> size:524288000 (0 GB)
+[2023/11/25 05:26:03] /dev/zd0 NO Ventoy detected
+[2023/11/25 05:26:03] get disk info sda
+[2023/11/25 05:26:03] is 4k native disk <sda> <0>
+[2023/11/25 05:26:03] get disk size from sysfs for sda
+[2023/11/25 05:26:03] ventoy_get_vtoy_data /dev/sda
+[2023/11/25 05:26:03] Invalid efi part2 name <>
+[2023/11/25 05:26:03] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/25 05:26:03] /dev/sda NO Ventoy detected
+[2023/11/25 05:26:03] ============= DISK DUMP ============
+[2023/11/25 05:26:03] /dev/sda [512 GB] ATA EMTEC X250 512GB (scsi)	Ventoy: NA
+[2023/11/25 05:26:03] /dev/zd0 [0 GB]   (unknown)	Ventoy: NA
+[2023/11/25 05:26:03] on_init_window ...
+[2023/11/25 05:26:03] load_languages ...
+[2023/11/25 05:26:03] current language <English (English)>
+[2023/11/25 05:26:03] fill_dev_list total disk: 2 showall:0
+[2023/11/25 05:26:03] combox count:0, no active id
+[2023/11/25 05:26:03] invalid active combox id -1
+[2023/11/25 05:26:09] ventoy_disk_enumerate_all
+[2023/11/25 05:26:09] get disk info zd0
+[2023/11/25 05:26:09] is 4k native disk <zd0> <0>
+[2023/11/25 05:26:09] get disk size from sysfs for zd0
+[2023/11/25 05:26:09] /sys/block/zd0/device/vendor not exist 
+[2023/11/25 05:26:09] /sys/block/zd0/device/model not exist 
+[2023/11/25 05:26:09] ventoy_get_vtoy_data /dev/zd0
+[2023/11/25 05:26:09] Invalid mbr magic 0x0 0x0
+[2023/11/25 05:26:09] disk:</dev/zd0 230:0> model:<  (unknown)> size:524288000 (0 GB)
+[2023/11/25 05:26:09] /dev/zd0 NO Ventoy detected
+[2023/11/25 05:26:09] get disk info sda
+[2023/11/25 05:26:09] is 4k native disk <sda> <0>
+[2023/11/25 05:26:09] get disk size from sysfs for sda
+[2023/11/25 05:26:09] ventoy_get_vtoy_data /dev/sda
+[2023/11/25 05:26:09] Invalid efi part2 name <>
+[2023/11/25 05:26:09] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/25 05:26:09] /dev/sda NO Ventoy detected
+[2023/11/25 05:26:09] fill_dev_list total disk: 2 showall:0
+[2023/11/25 05:26:09] combox count:0, no active id
+[2023/11/25 05:26:09] invalid active combox id -1
+[2023/11/25 05:26:28] ventoy_disk_enumerate_all
+[2023/11/25 05:26:28] get disk info sdb
+[2023/11/25 05:26:28] is 4k native disk <sdb> <0>
+[2023/11/25 05:26:28] get disk size from sysfs for sdb
+[2023/11/25 05:26:28] ventoy_get_vtoy_data /dev/sdb
+[2023/11/25 05:26:28] ventoy partition layout check OK: [2048 22493184] [22495232 65536]
+[2023/11/25 05:26:28] now check secure boot for /dev/sdb ...
+[2023/11/25 05:26:28] /EFI/BOOT/grubx64_real.efi find, secure boot in enabled
+[2023/11/25 05:26:28] disk:</dev/sdb 8:16> model:< USB DISK 3.0 (USB)> size:15846080512 (16 GB)
+[2023/11/25 05:26:28] /dev/sdb Ventoy:<1.0.96> MBR secureboot:1 preserve:4294967296
+[2023/11/25 05:26:28] get disk info zd0
+[2023/11/25 05:26:28] is 4k native disk <zd0> <0>
+[2023/11/25 05:26:28] get disk size from sysfs for zd0
+[2023/11/25 05:26:28] /sys/block/zd0/device/vendor not exist 
+[2023/11/25 05:26:28] /sys/block/zd0/device/model not exist 
+[2023/11/25 05:26:28] ventoy_get_vtoy_data /dev/zd0
+[2023/11/25 05:26:28] Invalid mbr magic 0x0 0x0
+[2023/11/25 05:26:28] disk:</dev/zd0 230:0> model:<  (unknown)> size:524288000 (0 GB)
+[2023/11/25 05:26:28] /dev/zd0 NO Ventoy detected
+[2023/11/25 05:26:28] get disk info sda
+[2023/11/25 05:26:28] is 4k native disk <sda> <0>
+[2023/11/25 05:26:28] get disk size from sysfs for sda
+[2023/11/25 05:26:28] ventoy_get_vtoy_data /dev/sda
+[2023/11/25 05:26:28] Invalid efi part2 name <>
+[2023/11/25 05:26:28] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/25 05:26:28] /dev/sda NO Ventoy detected
+[2023/11/25 05:26:28] fill_dev_list total disk: 3 showall:0
+[2023/11/25 05:26:28] combox count:1, active:sdb id:0
+[2023/11/25 05:26:30] on_exit_window ...
+[2023/11/25 05:26:31] ######## Ventoy2Disk GTK 1.0.96 exit ########
+[2023/11/25 05:28:32] 
+[2023/11/25 05:28:32] =========================================================
+[2023/11/25 05:28:32] =========================================================
+[2023/11/25 05:28:32] =============== VentoyGui x86_64 ===============
+[2023/11/25 05:28:32] =========================================================
+[2023/11/25 05:28:32] =========================================================
+[2023/11/25 05:28:32] log file is <log.txt>
+[2023/11/25 05:28:32] pid:54720 ppid:2486 uid:1000 euid:1000
+[2023/11/25 05:28:32] adjust dir:0  current path:/home/neo/Public/neoricalex/ventoy-1.0.96
+[2023/11/25 05:28:32] =========RAW ARGS BEGIN===========
+[2023/11/25 05:28:32] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:28:32] =========RAW ARGS END===========
+[2023/11/25 05:28:32] uname -m <x86_64> 64bit
+[2023/11/25 05:28:32] Build bit is 64 (x86_64)
+[2023/11/25 05:28:32] Now detect the GUI type ...
+[2023/11/25 05:28:32] 1009 libs found in cache format 1
+[2023/11/25 05:28:32] LIB:<libgtk-4.so.1>
+[2023/11/25 05:28:32] LIB:<libgtk-3.so.0>
+[2023/11/25 05:28:32] LIB:<libgtk-x11-2.0.so.0>
+[2023/11/25 05:28:32] ldconfig lib flags 0x7
+[2023/11/25 05:28:32] lib flags GLADE2:[NO] GTK2:[YES] GTK3:[YES] GTK4:[YES] QT4:[NO] QT5:[NO] QT6:[NO]
+[2023/11/25 05:28:32] This is gtk3 X environment.
+[2023/11/25 05:28:32] exe = /home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3
+[2023/11/25 05:28:32] execute permission check success.
+[2023/11/25 05:28:32] EUID check failed.
+[2023/11/25 05:28:32] try restart self by pkexec ...
+[2023/11/25 05:28:32] Find pkexec at </usr/bin/pkexec>
+[2023/11/25 05:28:32] create environment param 43
+[2023/11/25 05:28:32] =========PKEXEC ARGS BEGIN===========
+[2023/11/25 05:28:32] argv[0]=</usr/bin/pkexec>
+[2023/11/25 05:28:32] argv[1]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:28:32] argv[2]=<_vtoy_env_str_=USER=neo
+XDG_SESSION_TYPE=wayland
+SHLVL=0
+HOME=/home/neo
+DESKTOP_SESSION=ubuntu
+GTK_MODULES=gail:atk-bridge
+GNOME_SHELL_SESSION_MODE=ubuntu
+MANAGERPID=2486
+SYSTEMD_EXEC_PID=2888
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+DBUS_STARTER_BUS_TYPE=session
+LIBVIRT_DEFAULT_URI=qemu:///system
+GIO_LAUNCHED_DESKTOP_FILE_PID=54720
+IM_CONFIG_PHASE=1
+WAYLAND_DISPLAY=wayland-0
+LOGNAME=neo
+JOURNAL_STREAM=8:32300
+_=/usr/bin/gnome-session
+XDG_SESSION_CLASS=user
+USERNAME=neo
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+SESSION_MANAGER=local/notebook:@/tmp/.ICE-unix/2888,unix/notebook:/tmp/.ICE-unix/2888
+INVOCATION_ID=03b9e63285984ffb8049a2f31e802c4e
+GNOME_SETUP_DISPLAY=:1
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+DISPLAY=:0
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+LANG=fr_FR.UTF-8
+XMODIFIERS=@im=ibus
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.ZIWEG2
+XDG_SESSION_DESKTOP=ubuntu
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SHELL=/bin/bash
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+QT_IM_MODULE=ibus
+PWD=/home/neo/Public/neoricalex/ventoy-1.0.96
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+>
+[2023/11/25 05:28:32] argv[3]=<_vtoy_gui_path_=/home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:28:32] =========PKEXEC ARGS END===========
+[2023/11/25 05:28:38] 
+[2023/11/25 05:28:38] =========================================================
+[2023/11/25 05:28:38] =========================================================
+[2023/11/25 05:28:38] =============== VentoyGui x86_64 ===============
+[2023/11/25 05:28:38] =========================================================
+[2023/11/25 05:28:38] =========================================================
+[2023/11/25 05:28:38] log file is <log.txt>
+[2023/11/25 05:28:38] pid:54720 ppid:2486 uid:0 euid:0
+[2023/11/25 05:28:38] adjust dir:0  current path:/home/neo/Public/neoricalex/ventoy-1.0.96
+[2023/11/25 05:28:38] =========RAW ARGS BEGIN===========
+[2023/11/25 05:28:38] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/VentoyGUI.x86_64>
+[2023/11/25 05:28:38] argv[1]=<_vtoy_env_str_=USER=neo
+XDG_SESSION_TYPE=wayland
+SHLVL=0
+HOME=/home/neo
+DESKTOP_SESSION=ubuntu
+GTK_MODULES=gail:atk-bridge
+GNOME_SHELL_SESSION_MODE=ubuntu
+MANAGERPID=2486
+SYSTEMD_EXEC_PID=2888
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+DBUS_STARTER_BUS_TYPE=session
+LIBVIRT_DEFAULT_URI=qemu:///system
+GIO_LAUNCHED_DESKTOP_FILE_PID=54720
+IM_CONFIG_PHASE=1
+WAYLAND_DISPLAY=wayland-0
+LOGNAME=neo
+JOURNAL_STREAM=8:32300
+_=/usr/bin/gnome-session
+XDG_SESSION_CLASS=user
+USERNAME=neo
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+SESSION_MANAGER=local/notebook:@/tmp/.ICE-unix/2888,unix/notebook:/tmp/.ICE-unix/2888
+INVOCATION_ID=03b9e63285984ffb8049a2f31e802c4e
+GNOME_SETUP_DISPLAY=:1
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+DISPLAY=:0
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+LANG=fr_FR.UTF-8
+XMODIFIERS=@im=ibus
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.ZIWEG2
+XDG_SESSION_DESKTOP=ubuntu
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SHELL=/bin/bash
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+QT_IM_MODULE=ibus
+PWD=/home/neo/Public/neoricalex/ventoy-1.0.96
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=9dc5f75f0370ec1fa7af706e6588f5b8
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+>
+[2023/11/25 05:28:38] argv[2]=<_vtoy_gui_path_=/home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:28:38] =========RAW ARGS END===========
+[2023/11/25 05:28:38] recover environ 43 43
+[2023/11/25 05:28:38] recover success, argc=1 evecve </home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:28:38] =========EXECVE ARGS BEGIN===========
+[2023/11/25 05:28:38] argv[0]=</home/neo/Public/neoricalex/ventoy-1.0.96/tool/x86_64/Ventoy2Disk.gtk3>
+[2023/11/25 05:28:38] =========EXECVE ARGS END===========
+[2023/11/25 05:28:38] ================================================
+[2023/11/25 05:28:38] ===== Ventoy2Disk 1.0.96 powered by GTK3.x =====
+[2023/11/25 05:28:38] ================================================
+[2023/11/25 05:28:38] log file is <log.txt> lastsize:54720
+[2023/11/25 05:28:38] ini file is <./Ventoy2Disk.ini>
+[2023/11/25 05:28:38] ventoy_disk_enumerate_all
+[2023/11/25 05:28:38] get disk info sdb
+[2023/11/25 05:28:38] is 4k native disk <sdb> <0>
+[2023/11/25 05:28:38] get disk size from sysfs for sdb
+[2023/11/25 05:28:38] ventoy_get_vtoy_data /dev/sdb
+[2023/11/25 05:28:38] ventoy partition layout check OK: [2048 22493184] [22495232 65536]
+[2023/11/25 05:28:38] now check secure boot for /dev/sdb ...
+[2023/11/25 05:28:38] /EFI/BOOT/grubx64_real.efi find, secure boot in enabled
+[2023/11/25 05:28:38] disk:</dev/sdb 8:16> model:< USB DISK 3.0 (USB)> size:15846080512 (16 GB)
+[2023/11/25 05:28:38] /dev/sdb Ventoy:<1.0.96> MBR secureboot:1 preserve:4294967296
+[2023/11/25 05:28:38] get disk info zd0
+[2023/11/25 05:28:38] is 4k native disk <zd0> <0>
+[2023/11/25 05:28:38] get disk size from sysfs for zd0
+[2023/11/25 05:28:38] /sys/block/zd0/device/vendor not exist 
+[2023/11/25 05:28:38] /sys/block/zd0/device/model not exist 
+[2023/11/25 05:28:38] ventoy_get_vtoy_data /dev/zd0
+[2023/11/25 05:28:38] Invalid mbr magic 0x0 0x0
+[2023/11/25 05:28:38] disk:</dev/zd0 230:0> model:<  (unknown)> size:524288000 (0 GB)
+[2023/11/25 05:28:38] /dev/zd0 NO Ventoy detected
+[2023/11/25 05:28:38] get disk info sda
+[2023/11/25 05:28:38] is 4k native disk <sda> <0>
+[2023/11/25 05:28:38] get disk size from sysfs for sda
+[2023/11/25 05:28:38] ventoy_get_vtoy_data /dev/sda
+[2023/11/25 05:28:38] Invalid efi part2 name <>
+[2023/11/25 05:28:38] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/25 05:28:38] /dev/sda NO Ventoy detected
+[2023/11/25 05:28:38] ============= DISK DUMP ============
+[2023/11/25 05:28:38] /dev/sdb [16 GB]  USB DISK 3.0 (USB)	Ventoy: 1.0.96 MBR secureboot:1 preserve:4294967296
+[2023/11/25 05:28:38] /dev/sda [512 GB] ATA EMTEC X250 512GB (scsi)	Ventoy: NA
+[2023/11/25 05:28:38] /dev/zd0 [0 GB]   (unknown)	Ventoy: NA
+[2023/11/25 05:28:38] on_init_window ...
+[2023/11/25 05:28:38] load_languages ...
+[2023/11/25 05:28:38] current language <English (English)>
+[2023/11/25 05:28:38] fill_dev_list total disk: 3 showall:0
+[2023/11/25 05:28:38] combox count:1, active:sdb id:0
+[2023/11/25 05:29:17] install_thread ...
+[2023/11/25 05:29:17] ==================================================================================
+[2023/11/25 05:29:17] ===== ventoy install /dev/sdb style:GPT secureboot:1 align4K:1 reserve:4294967296 =========
+[2023/11/25 05:29:17] ==================================================================================
+[2023/11/25 05:29:17] /dev/sdb mounted </dev/sdb1 /media/neo/Ventoy exfat rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,iocharset=utf8,errors=remount-ro 0 0
+>
+[2023/11/25 05:29:17] disk is mounted, now try to unmount it ...
+[2023/11/25 05:29:17] umount </dev/sdb> </media/neo/Ventoy> [ success ]
+[2023/11/25 05:29:17] disk is not mounted now, we can do the install ...
+[2023/11/25 05:29:17] start install thread  USB DISK 3.0 (USB) ...
+[2023/11/25 05:29:17] func handler install <{ "result" : "success" }>
+[2023/11/25 05:29:17] set percent 1
+[2023/11/25 05:29:17] ventoy_install_thread run ...
+[2023/11/25 05:29:17] check disk sdb
+[2023/11/25 05:29:17] disk is not mounted now, we can do continue ...
+[2023/11/25 05:29:17] ventoy_clean_disk fd:7 size:15846080512
+[2023/11/25 05:29:17] write disk at off:0 writelen:65536 datalen:65536
+[2023/11/25 05:29:17] write disk at off:15846014976 writelen:65536 datalen:65536
+[2023/11/25 05:29:17] read core.img.xz rc:0 len:455196
+[2023/11/25 05:29:17] ventoy_unxz_stg1_img len:455196 rc:0
+[2023/11/25 05:29:17] read disk.img.xz rc:0 len:13456512
+[2023/11/25 05:29:17] set percent 8
+[2023/11/25 05:29:17] set percent 9
+[2023/11/25 05:29:17] set percent 12
+[2023/11/25 05:29:17] set percent 16
+[2023/11/25 05:29:17] set percent 17
+[2023/11/25 05:29:17] set percent 20
+[2023/11/25 05:29:17] set percent 25
+[2023/11/25 05:29:17] set percent 30
+[2023/11/25 05:29:17] set percent 33
+[2023/11/25 05:29:17] set percent 37
+[2023/11/25 05:29:17] set percent 41
+[2023/11/25 05:29:18] set percent 46
+[2023/11/25 05:29:18] set percent 50
+[2023/11/25 05:29:18] set percent 54
+[2023/11/25 05:29:18] ventoy_unxz_efipart_img len:13456512 rc:0 unxzlen:33554432
+[2023/11/25 05:29:18] Fill GPT part table
+[2023/11/25 05:29:18] Disk signature: 0x3489d994
+[2023/11/25 05:29:18] Part1SectorCount:22493151 is not aligned by 4KB (7)
+[2023/11/25 05:29:18] Disk need to align with 4KB 7
+[2023/11/25 05:29:18] Part1StartSector:2048 Part1SectorCount:22493144 Part2StartSector:22495192
+[2023/11/25 05:29:18] Wait for format part1 (partstyle changed) ...
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:18] set percent 59
+[2023/11/25 05:29:19] set percent 59
+[2023/11/25 05:29:19] set percent 59
+[2023/11/25 05:29:19] set percent 59
+[2023/11/25 05:29:19] Formatting part1 exFAT /dev/sdb ...
+[0123/11/25 05:29:19] Creating... 
+[0123/11/25 05:29:19] Flushing... 
+[2023/11/25 05:29:19] set percent 61
+[2023/11/25 05:29:19] Formatting part2 EFI ...
+[2023/11/25 05:29:19] Formatting part2 EFI offset:11517538304 ...
+[2023/11/25 05:29:19] VentoyProcSecureBoot 1 ...
+[2023/11/25 05:29:19] Secure boot is enabled ...
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] set percent 64
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] write disk writelen:1048576 datalen:1048576 [ success ]
+[2023/11/25 05:29:19] Writing legacy grub ...
+[2023/11/25 05:29:19] Write GPT stage1 ...
+[2023/11/25 05:29:19] lseek offset:17408(17408) writelen:1031168(1031168)
+[2023/11/25 05:29:19] fsync data1...
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:19] set percent 80
+[2023/11/25 05:29:20] set percent 80
+[2023/11/25 05:29:20] set percent 80
+[2023/11/25 05:29:20] set percent 80
+[2023/11/25 05:29:20] Checking part2 efi data /dev/sdb ...
+[2023/11/25 05:29:20] set percent 82
+[2023/11/25 05:29:20] set percent 83
+[2023/11/25 05:29:20] set percent 85
+[2023/11/25 05:29:20] set percent 88
+[2023/11/25 05:29:20] set percent 90
+[2023/11/25 05:29:20] set percent 91
+[2023/11/25 05:29:20] set percent 93
+[2023/11/25 05:29:20] efi part data check success
+[2023/11/25 05:29:20] Writting Partition Table style:1...
+[2023/11/25 05:29:20] write backup gpt part table off:15846080000 len:512
+[2023/11/25 05:29:20] write main gpt part table off:15846063616 len:16384
+[2023/11/25 05:29:20] write gpt part head off:0 len:17408
+[2023/11/25 05:29:20] fsync data2...
+[2023/11/25 05:29:20] set percent 98
+[2023/11/25 05:29:20] ====================================
+[2023/11/25 05:29:20] ====== ventoy install success ======
+[2023/11/25 05:29:20] ====================================
+[2023/11/25 05:29:20] set percent 100
+[2023/11/25 05:29:20] ventoy_disk_enumerate_all
+[2023/11/25 05:29:20] get disk info sdb
+[2023/11/25 05:29:20] is 4k native disk <sdb> <0>
+[2023/11/25 05:29:20] get disk size from sysfs for sdb
+[2023/11/25 05:29:20] ventoy_get_vtoy_data /dev/sdb
+[2023/11/25 05:29:20] ventoy partition layout check OK: [2048 22493144] [22495192 65536]
+[2023/11/25 05:29:20] now check secure boot for /dev/sdb ...
+[2023/11/25 05:29:20] /EFI/BOOT/grubx64_real.efi find, secure boot in enabled
+[2023/11/25 05:29:20] disk:</dev/sdb 8:16> model:< USB DISK 3.0 (USB)> size:15846080512 (16 GB)
+[2023/11/25 05:29:20] /dev/sdb Ventoy:<1.0.96> GPT secureboot:1 preserve:4294970880
+[2023/11/25 05:29:20] get disk info zd0
+[2023/11/25 05:29:20] is 4k native disk <zd0> <0>
+[2023/11/25 05:29:20] get disk size from sysfs for zd0
+[2023/11/25 05:29:20] /sys/block/zd0/device/vendor not exist 
+[2023/11/25 05:29:20] /sys/block/zd0/device/model not exist 
+[2023/11/25 05:29:20] ventoy_get_vtoy_data /dev/zd0
+[2023/11/25 05:29:20] Invalid mbr magic 0x0 0x0
+[2023/11/25 05:29:20] disk:</dev/zd0 230:0> model:<  (unknown)> size:524288000 (0 GB)
+[2023/11/25 05:29:20] /dev/zd0 NO Ventoy detected
+[2023/11/25 05:29:20] get disk info sda
+[2023/11/25 05:29:20] is 4k native disk <sda> <0>
+[2023/11/25 05:29:20] get disk size from sysfs for sda
+[2023/11/25 05:29:20] ventoy_get_vtoy_data /dev/sda
+[2023/11/25 05:29:20] Invalid efi part2 name <>
+[2023/11/25 05:29:20] disk:</dev/sda 8:0> model:<ATA EMTEC X250 512GB (scsi)> size:512110190592 (512 GB)
+[2023/11/25 05:29:20] /dev/sda NO Ventoy detected
+[2023/11/25 05:29:26] set percent 0
+[2023/11/25 05:29:26] fill_dev_list total disk: 3 showall:0
+[2023/11/25 05:29:26] combox count:1, active:sdb id:0
+[2023/11/25 05:29:57] on_exit_window ...
+[2023/11/25 05:29:57] ######## Ventoy2Disk GTK 1.0.96 exit ########

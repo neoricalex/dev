@@ -1,0 +1,6 @@
+src/html/desktop /usr/share/qemu-web-desktop/html
+build/qemu-web-desktop.pl /usr/lib/cgi-bin
+build/qemu-web-desktop.conf /etc/apache2/conf-available
+src/config.pl /etc/qemu-web-desktop
+src/machines.conf /etc/qemu-web-desktop
+src/bin/qwdctl /usr/bin

@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with apache2 --with sysuser
+
+override_dh_auto_build:
+	mkdir build
+	cp src/apache.conf build/qemu-web-desktop.conf
+	cp src/cgi-bin/qemu-web-desktop.pl build/qemu-web-desktop.pl
+	pandoc -s -o build/qwdctl.1 src/qwdctl.md
+
+override_dh_install:
+	dh_install
+
+override_dh_clean:
+	rm -rf build
+	dh_clean

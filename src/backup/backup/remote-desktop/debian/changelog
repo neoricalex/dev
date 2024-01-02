@@ -1,0 +1,133 @@
+qemu-web-desktop (23.10.18) unstable; urgency=medium
+
+  * New upstream release.
+  
+ -- Emmanuel Farhi <emmanuel.farhi@synchrotron-soleil.fr>  Wed, 18 Oct 2023 08:58:24 +0100
+
+qemu-web-desktop (23.06.22) unstable; urgency=medium
+
+  * New upstream release.
+  
+ -- Emmanuel Farhi <emmanuel.farhi@synchrotron-soleil.fr>  Thu, 22 Jun 2023 10:38:24 +0100
+
+qemu-web-desktop (22.09.26) unstable; urgency=medium
+
+  * New upstream release.
+
+qemu-web-desktop (22.06.09) unstable; urgency=medium
+
+  * New upstream release.
+
+qemu-web-desktop (22.04.22) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Emmanuel Farhi <emmanuel.farhi@synchrotron-soleil.fr>  Fri, 22 Apr 2022 14:27:08 +0100
+
+qemu-web-desktop (22.04.18) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Emmanuel Farhi <emmanuel.farhi@synchrotron-soleil.fr>  Tue, 18 Apr 2022 13:48:38 +0100
+
+qemu-web-desktop (22.04.16) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Emmanuel Farhi <emmanuel.farhi@synchrotron-soleil.fr>  Sat, 16 Apr 2022 15:24:27 +0100
+
+qemu-web-desktop (22.04.14) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Emmanuel Farhi <emmanuel.farhi@synchrotron-soleil.fr>  Thu, 14 Apr 2022 11:50:12 +0100
+
+qemu-web-desktop (22.02.11-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Emmanuel Farhi <emmanuel.farhi@synchrotron-soleil.fr>  Fri, 11 Feb 2022 23:05:45 +0100
+
+qemu-web-desktop (21.11.30+ds1-1) unstable; urgency=medium
+
+  * Repack upstream tarball to exclude debian/ directory in addition to VM
+    images.
+
+ -- Roland Mas <lolando@debian.org>  Wed, 01 Dec 2021 19:08:14 +0100
+
+qemu-web-desktop (21.11.30-1) unstable; urgency=medium
+
+  * Add watch file.
+  * New upstream release.
+
+ -- Roland Mas <lolando@debian.org>  Wed, 01 Dec 2021 17:24:26 +0100
+
+qemu-web-desktop (21.08.10-5) unstable; urgency=medium
+
+  * Source-only upload for migration to testing.
+
+ -- Roland Mas <lolando@debian.org>  Wed, 22 Sep 2021 21:01:37 +0200
+
+qemu-web-desktop (21.08.10-4) unstable; urgency=medium
+
+  * Make postrm more robust (thanks, piuparts).
+
+ -- Roland Mas <lolando@debian.org>  Wed, 22 Sep 2021 20:05:31 +0200
+
+qemu-web-desktop (21.08.10-3) unstable; urgency=medium
+
+  * Remove dependency on qemu, but suggest qemu-system for users that need
+    full flexibility (closes: #989638, #992950).
+
+ -- Roland Mas <lolando@debian.org>  Tue, 21 Sep 2021 21:32:11 +0200
+
+qemu-web-desktop (21.08.10-2) unstable; urgency=medium
+
+  * Add Frédéric-Emmanuel Picca to Uploaders.
+  * Add remove unused dirs on purge (thanks, piuparts).
+
+ -- Roland Mas <lolando@debian.org>  Fri, 10 Sep 2021 17:27:14 +0200
+
+qemu-web-desktop (21.08.10-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Roland Mas <lolando@debian.org>  Sat, 14 Aug 2021 11:30:06 +0200
+
+qemu-web-desktop (21.05.03-4) unstable; urgency=medium
+
+  * Fix Vcs-* fields.
+
+ -- Roland Mas <lolando@debian.org>  Wed, 09 Jun 2021 13:48:09 +0200
+
+qemu-web-desktop (21.05.03-3) unstable; urgency=medium
+
+  * Remove test code.
+
+ -- Roland Mas <lolando@debian.org>  Wed, 09 Jun 2021 11:41:58 +0200
+
+qemu-web-desktop (21.05.03-2) unstable; urgency=medium
+
+  * Bug fix: "qemu-kvm dependency isn't available on all Architecture:
+    any", thanks to Christian Ehrhardt (Closes: #989638).
+
+ -- Roland Mas <lolando@debian.org>  Wed, 09 Jun 2021 11:20:33 +0200
+
+qemu-web-desktop (21.05.03-1) unstable; urgency=medium
+
+  * New upstream release to work around an MPM-ITK quirk.
+
+ -- Roland Mas <lolando@debian.org>  Mon, 17 May 2021 18:51:33 +0200
+
+qemu-web-desktop (21.04.10-2) unstable; urgency=medium
+
+  * Add missing Depends: confget.
+
+ -- Roland Mas <lolando@debian.org>  Tue, 20 Apr 2021 11:37:25 +0200
+
+qemu-web-desktop (21.04.10-1) unstable; urgency=medium
+
+  * Initial upload (closes: #986543).
+
+ -- Roland Mas <lolando@debian.org>  Mon, 12 Apr 2021 12:48:12 +0200
+

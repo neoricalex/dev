@@ -1,0 +1,171 @@
+#!/bin/bash
+
+# REF: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+inicio_cor="\033[0;32m"
+cor_amarela="\033[0;93m"
+fim_cor="\033[0m"
+
+echo -e "$inicio_cor ==> Executando o rootfs.nfdos $fim_cor"
+
+echo -e "$inicio_cor ==> Montando o /proc /sys e /dev/pts $fim_cor"
+mount none -t proc /proc
+mount none -t sysfs /sys
+mount none -t devpts /dev/pts
+
+echo -e "$inicio_cor ==> Exportando as variáveis de ambiente $fim_cor"
+export HOME=/root
+export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true
+export LC_ALL="C"
+
+echo -e "$inicio_cor ==> Adicionando a sources.list dos pacotes deb $fim_cor"
+cat <<EOF > /etc/apt/sources.list
+deb http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
+
+deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse
+
+deb http://archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
+
+deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+
+deb http://archive.canonical.com/ubuntu focal partner
+deb-src http://archive.canonical.com/ubuntu focal partner
+EOF
+
+echo -e "$inicio_cor ==> Atualizando o gerenciador de pacotes deb $fim_cor"
+apt update
+
+echo -e "$inicio_cor ==> Instalando o systemd $fim_cor"
+apt install -y libterm-readline-gnu-perl systemd-sysv 
+
+echo -e "$inicio_cor ==> Criando o divert $fim_cor"
+dbus-uuidgen > /etc/machine-id
+ln -fs /etc/machine-id /var/lib/dbus/machine-id
+dpkg-divert --local --rename --add /sbin/initctl
+ln -s /bin/true /sbin/initctl
+
+instalar_pacotes_base(){
+    echo -e "$inicio_cor ==> Instalando os pacotes base $fim_cor"
+    apt install -y build-essential
+    apt install -y linux-generic
+    apt install -y ubuntu-minimal
+
+    apt install -y \
+        casper \
+        lupin-casper \
+        discover \
+        laptop-detect \
+        os-prober \
+        dosfstools \
+        ssl-cert \
+        network-manager \
+        resolvconf \
+        net-tools \
+        wireless-tools \
+        locales
+}
+instalar_pacotes_uteis(){
+
+    echo -e "$inicio_cor ==> Instalando pacotes úteis $fim_cor"
+    apt install -y \
+        curl \
+        wget \
+        openssh-server \
+        apt-transport-https \
+        nano \
+        tmux \
+        less \
+        snapd \
+        git \
+		sudo
+
+    systemctl enable --now snapd.socket
+
+}
+instalar_subiquity(){
+    echo -e "$inicio_cor ==> Instalando pacotes adicionais para o Live CD $fim_cor"
+ 
+}
+configurar_rede(){
+echo -e "$inicio_cor ==> Configurando a rede $fim_cor"
+dpkg-reconfigure resolvconf
+
+cat <<EOF > /etc/NetworkManager/NetworkManager.conf
+[main]
+rc-manager=resolvconf
+plugins=ifupdown,keyfile
+dns=dnsmasq
+[ifupdown]
+managed=false
+EOF
+
+dpkg-reconfigure network-manager
+systemctl disable NetworkManager-wait-online.service
+systemctl mask NetworkManager-wait-online.service
+systemctl enable --now systemd-networkd-wait-online.service
+
+}
+diversos(){
+    echo "==> Instalar os pacotes em Português"
+    apt install -y \
+        language-pack-pt \
+        language-pack-pt-base 
+
+    echo -e "$inicio_cor ==> Instalando o idioma Português $fim_cor"
+    echo "America/Sao_Paulo" > /etc/timezone && \
+        dpkg-reconfigure -f noninteractive tzdata && \
+        locale-gen --purge pt_BR.UTF-8 && \
+        sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen && \
+        echo 'LANG="pt_BR.UTF-8"\nLANGUAGE="pt_BR:pt"\n'>/etc/default/locale && \
+        dpkg-reconfigure --frontend=noninteractive locales && \
+        update-locale LANG=pt_BR.UTF-8 LANGUAGE=pt_BR
+
+    echo "==> Gerar o idioma pt_BR"
+    LANG=pt_BR.UTF-8
+    LC_ALL=$LANG
+    locale-gen --purge $LANG
+    update-locale LANG=$LANG LC_ALL=$LC_ALL
+
+    apt install -y `check-language-support -l pt_BR`
+
+    echo -e "$inicio_cor ==> Setando a senha do usuário root para: neoricalex $fim_cor"
+    (echo "neoricalex"; echo "neoricalex") | sudo passwd root
+
+    echo -e "$inicio_cor ==> Clonando o repositório NEORICALEX $fim_cor"
+    git clone https://github.com/neoricalex/neoricalex.git /home/neo
+
+    echo -e "$inicio_cor ==> Instalar o Docker $fim_cor"
+    apt install -y \
+        ca-certificates \
+        curl \
+        gnupg \
+        lsb-release
+
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+    echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+    apt update
+    apt install -y docker-ce docker-ce-cli containerd.io
+    groupadd docker
+    usermod -aG docker neo 
+    systemctl enable docker.service
+    systemctl enable containerd.service
+
+    echo -e "$inicio_cor ==> Configurar o boot.service $fim_cor"
+    chmod 744 /usr/local/bin/no-boot.sh 
+    chmod 664 /etc/systemd/system/boot.service
+    systemctl daemon-reload
+    systemctl enable boot.service
+
+}
+instalar_pacotes_base
+configurar_rede
+instalar_subiquity
+instalar_pacotes_uteis
+diversos

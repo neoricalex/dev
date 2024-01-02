@@ -1,0 +1,19 @@
+sudo apt install -y mkisofs
+mkdir /tmp/custom_iso
+cd /tmp/custom_iso/
+sudo mount -t iso9660 -o loop ~/neoricalex/src/vps/iso/mini.iso /mnt/
+cd /mnt
+tar cf - . | (cd /tmp/custom_iso; tar xfp -)
+
+cd /tmp/custom_iso
+sudo mkisofs -o ~/neoricalex/src/vps/iso/servidor.iso -b isolinux.bin -c boot.cat \
+    -no-emul-boot -boot-load-size 4 -boot-info-table -J -R -V "Servidor NEORICALEX" .
+
+sudo apt install -y syslinux-utils
+sudo isohybrid ~/neoricalex/src/vps/iso/servidor.iso
+
+sudo chown neo:neo ~/neoricalex/src/vps/iso/servidor.iso
+sudo mv servidor.iso ~/neoricalex/src/vps/iso/
+
+gzip -c preseed.cfg > preseed.gz
+cat ~/neoricalex/src/vps/iso/preseed.cfg | gzip > preseed.gz

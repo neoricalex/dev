@@ -1,0 +1,123 @@
+{
+    "builders": [
+      {
+        "boot_command": [
+          "<ESC>",
+          "<ESC>",
+          "<ESC>",
+          "llinux",
+          " auto",
+          " console-setup/ask_detect=false",
+          " console-setup/layoutcode=us",
+          " console-setup/modelcode=pc105",
+          " debconf/frontend=noninteractive",
+          " debian-installer=en_US",
+          " fb=false",
+          " initrd=initrd.gz",
+          " kbd-chooser/method=us",
+          " keyboard-configuration/layout=USA",
+          " keyboard-configuration/variant=USA",
+          " locale=en_US",
+          " netcfg/get_domain=vm",
+          " netcfg/get_hostname=vagrant",
+          " grub-installer/bootdev=/dev/sda",
+          " noapic",
+          " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
+          " -- ",
+          "<ENTER>"
+        ],
+        "boot_wait": "10s",
+        "disk_size": 81920,
+        "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+        "guest_os_type": "Ubuntu_64",
+        "headless": true,
+        "http_directory": "src/vps/http",
+        "iso_checksum": "sha256:0e79e00bf844929d40825b1f0e8634415cda195ba23bae0b041911fde4dfe018",
+        "iso_urls": [
+          "src/vps/iso/mini.iso"
+        ],
+        "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
+        "ssh_pty": "true",
+        "ssh_password": "vagrant",
+        "ssh_port": 22,
+        "ssh_timeout": "10000s",
+        "ssh_username": "vagrant",
+        "type": "virtualbox-iso",
+        "vboxmanage": [
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--memory",
+            "4096"
+          ],
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--vram",
+            "16"
+          ],
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--graphicscontroller",
+            "vmsvga"
+          ],
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--accelerate3d",
+            "on"
+          ],
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--rtcuseutc",
+            "on"
+          ],
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--hpet",
+            "on"
+          ],
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--hwvirtex",
+            "on"
+          ],
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--nestedpaging",
+            "on"
+          ],
+          [
+            "modifyvm",
+            "{{.Name}}",
+            "--cpus",
+            "2"
+          ]
+        ],
+        "virtualbox_version_file": ".vbox_version",
+        "vm_name": "VPS"
+      }
+    ],
+    "post-processors": [
+      {
+        "compression_level": "8",
+        "output": "src/vps/box/vps.box",
+        "type": "vagrant"
+      }
+    ],
+    "provisioners": [
+      {
+        "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+        "expect_disconnect": true,
+        "scripts": [
+          "src/vps/scripts/init.sh"
+        ],
+        "type": "shell"
+      }
+    ]
+  }

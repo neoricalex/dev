@@ -1,0 +1,115 @@
+#! /bin/sh
+
+#Usage: /usr/bin/qwdctl controls the availability of virtual machines for the qemu-web-desktop service.
+#  Each entry in the configuration file `/etc/qemu-web-desktop/machines.conf` 
+#  spans on 3 lines:
+#
+#  -  [name.ext] 
+#  -  url=[URL to ISO, QCOW2, VDI, VMDK, RAW, VHD/VHDX, QED virtual machine disk, optional]
+#  -  description=[description to be shown in the service page] 
+#
+#  Images listed in the configuration file without a `url=` parameter are
+#  expected to be downloaded by hand and installed into
+#  `/var/lib/qemu-web-desktop/machines` by the local administrator. Then, just 
+#  specify the [name.ext] and description.
+# 
+# qwdctl download|update
+#  scan the /etc/qemu-web-desktop/machines.conf file for [name.ext] and download them when URL are given.
+#  a 'refresh' is then performed. Virtual machine images are stored into /var/lib/qemu-web-desktop/machines.
+# 
+# qwdctl refresh
+#  scan the /etc/qemu-web-desktop/machines.conf file, and generate the /var/lib/qemu-web-desktop/include.html that lists
+#  available images to show in the qemu-web-desktop main form.
+#
+# qwdctl status
+#  list running sessions
+
+set -e
+
+# file to process
+image_list_file=/etc/qemu-web-desktop/machines.conf
+
+# generated files, should be linked into /usr/share/qemu-web-desktop/html/desktop/
+qwdprefix=/var/lib/qemu-web-desktop
+machine_file=$qwdprefix/machines.html
+
+case "$1" in
+    download|update)
+	mkdir -p $qwdprefix/machines || true
+	cd $qwdprefix/machines
+
+	for i in $(confget -f $image_list_file -q sections) ; do
+	    mkdir -p downloads/$i || true
+	    u=$(confget -f $image_list_file -s $i url)
+	    if [ "$u" ] ; then
+		cd downloads/$i
+		echo "Getting $u"
+		wget -N $u
+		cd ../..
+	    fi
+	    vm=$(ls -t downloads/$i/* | head -1)
+	    if [ -e "$vm" ] ; then
+		ln -sf $vm $i
+	    fi
+	done
+	$0 refresh
+	;;
+    refresh)
+	mkdir -p $qwdprefix/snapshots || true
+	chown _qemu-web-desktop $qwdprefix/snapshots
+	mkdir -p $qwdprefix/machines || true
+        cd $qwdprefix/machines
+	
+	# list of machines
+	t=$(mktemp $machine_file.XXXXXX)
+	chmod 644 $t
+	for i in $(confget -f $image_list_file -q sections) ; do
+	    d=$(confget -f $image_list_file -s $i description)
+	    if [ -e $i ] ; then
+	    	    if [ "$d" ]; then
+		    	# add entry when VM file and descr are given
+		    	echo "Found $i '$d'"
+			echo "<option value='$i'>$d</option>" >> $t
+		    fi
+	    fi
+	done
+	mv $t $machine_file
+	;;
+	  status)
+  echo "Active sessions:"
+  echo "session_ID:user:VM\t| #cpu\t| #mem[MB]"
+	echo "-----------------------------------"
+  t=$(ps aux | grep qemu)
+	name=$(echo "$t" | grep -oP '(?<=\-name )[^ ]*' )
+	cpu=$(echo "$t" | grep -oP '(?<=\-smp )[^ ]*' )
+	mem=$(echo "$t" | grep -oP '(?<=\-m )[^ ]*' )
+	table=$(printf '%s\n' "$name" "$cpu" "$mem" | pr -3 -Ts'\t')
+	u=$(echo "$table" | uniq )
+	echo "$u"
+	;;
+
+    *)
+	echo "Unknown command $1"
+	echo "Usage: $0 controls the availability of virtual machines for the qemu-web-desktop service."
+	echo "  The main file to tune is $image_list_file."
+	echo "  Entries should contain lines"
+	echo "    [name.ext]"
+	echo "    description=<name of machine to appear in the form>"
+	echo "  In addition, any line with "
+	echo "    url=<link>"
+	echo "  will retrieve the given file. "
+	echo "  Supported virtual machine formats include: ISO, QCOW2, VDI, VMDK, RAW, VHD/VHDX, QED" 
+	echo " "
+	echo "$0 download|update"
+	echo "  scan the $image_list_file file for [name.ext] and download them when URL are given."
+	echo "  a 'refresh' is then performed. Virtual machine images are stored into $qwdprefix/machines."
+	echo " "
+	echo "$0 refresh"
+	echo "  scan the $image_list_file file, and generate the $machine_file that lists"
+	echo "  available images to show in the qemu-web-desktop main form."
+	echo " "
+	echo "$0 status"
+	echo "  list running sessions"
+	echo 
+	exit 1
+esac

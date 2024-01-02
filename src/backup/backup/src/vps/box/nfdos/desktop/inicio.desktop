@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=/bin/bash /var/lib/neoricalex/src/vps/box/nfdos/desktop/app/iniciar.sh
+Name=myscript
+Comment=script some stuff
+Terminal=false
+OnlyShowIn=GNOME
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true

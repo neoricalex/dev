@@ -175,7 +175,11 @@ checkar kvm
 checkar terraform
 cd localhost
 iniciar terraform
-terraform destroy -auto-approve
-#iniciar vps
+#terraform destroy -auto-approve
+iniciar vps
 #terraform destroy -auto-approve
 cd ..
+
+#sudo modprobe nbd max_part=8
+#sudo qemu-nbd --connect=/dev/nbd0 /var/lib/libvirt/images/vps-vm-disk
+#sudo qemu-nbd --disconnect /dev/nbd0

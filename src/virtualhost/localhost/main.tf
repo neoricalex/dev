@@ -32,9 +32,9 @@ resource "libvirt_volume" "os_image" {
 }
 
 resource "libvirt_volume" "os_image_resized" {
-  name = "${var.hostname}-vm_disk"
+  name = "${var.hostname}-vm-disk"
   pool = "default"
-  size   = 1e+10 # 10 GB in bytes
+  size   = 1.5e+10 # 15 GB in bytes
   base_volume_id = libvirt_volume.os_image.id
 }
 

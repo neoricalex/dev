@@ -57,7 +57,7 @@ src/neoricalex
 
 src/virtualhost/packer/packer_cache
 src/virtualhost/packer/output
-src/virtualhost/packer/img/*.img
+src/virtualhost/packer/img/ubuntu-22.04-server-cloudimg-amd64.img
 
 src/virtualhost/terraform/.terraform/
 src/virtualhost/terraform/iso/jammy-server-cloudimg-amd64.img

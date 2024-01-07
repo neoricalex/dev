@@ -54,10 +54,19 @@ Makefile
 *.o
 *.h
 src/neoricalex
-src/virtualhost/localhost/.terraform/
-src/virtualhost/localhost/iso/jammy-server-cloudimg-amd64.img
-src/virtualhost/localhost/.terraform.lock.hcl
-src/virtualhost/localhost/terraform.tfstate
-src/virtualhost/localhost/terraform.tfstate.backup
-src/virtualhost/localhost/vps
 
+src/virtualhost/packer/packer_cache
+src/virtualhost/packer/output
+src/virtualhost/packer/img/*.img
+
+src/virtualhost/terraform/.terraform/
+src/virtualhost/terraform/iso/jammy-server-cloudimg-amd64.img
+src/virtualhost/terraform/.terraform.lock.hcl
+src/virtualhost/terraform/terraform.tfstate
+src/virtualhost/terraform/terraform.tfstate.backup
+src/virtualhost/terraform/vps
+
+src/virtualhost/vagrant/.cache
+src/virtualhost/vagrant/.vagrant
+src/virtualhost/vagrant/nfdos
+src/virtualhost/vagrant/.sudo_as_admin_successful
